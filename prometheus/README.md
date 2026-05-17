@@ -5,6 +5,187 @@
 
 ---
 
+## Basic Questions
+
+1. What is Prometheus and what problem does it solve in a monitoring context?
+2. Explain the difference between a counter, gauge, histogram, and summary metric type in Prometheus.
+3. What is a scrape interval and how does Prometheus collect metrics from targets?
+4. What is the default port Prometheus listens on, and where is its configuration file located?
+5. What is a Prometheus exporter? Give three examples of commonly used exporters.
+6. How do you define a static scrape target in `prometheus.yml`?
+7. What is PromQL and what is it used for?
+8. Explain what a label is in Prometheus and why labels are important.
+9. What is the purpose of the Alertmanager in the Prometheus ecosystem?
+10. How do you check if a Prometheus target is being scraped successfully?
+11. What does the `up` metric in Prometheus represent?
+12. What is the difference between `rate()` and `irate()` in PromQL?
+13. How do you write a basic PromQL query to get the total HTTP request count for a service?
+14. What is a recording rule in Prometheus and why would you use one?
+15. What is the Pushgateway and when should it be used?
+16. How do you define an alert rule in Prometheus?
+17. What is the `for` clause in a Prometheus alert rule?
+18. What does `prometheus_tsdb_head_series` metric tell you?
+19. How do you reload Prometheus configuration without restarting the process?
+20. What is service discovery in Prometheus and name two supported service discovery mechanisms?
+21. What is the purpose of `relabel_configs` in a scrape configuration?
+22. How does Prometheus store data locally, and what is the default retention period?
+23. What is the difference between `sum()` and `count()` aggregation operators in PromQL?
+24. How do you filter metrics by label value in a PromQL query?
+25. What is a Prometheus federation and when would you use it?
+26. What is the purpose of the `--web.enable-lifecycle` flag in Prometheus?
+27. How do you expose custom application metrics using the Prometheus client library?
+28. What is the `node_exporter` and what types of metrics does it expose?
+29. How do you configure Alertmanager to send notifications to Slack?
+30. What is the difference between `increase()` and `rate()` in PromQL?
+31. What does the `absent()` function do in PromQL?
+32. How do you query the top 5 services by request rate in PromQL?
+33. What is a Prometheus data model and how are time series identified?
+34. What is the `kube-state-metrics` exporter used for in Kubernetes monitoring?
+35. How do you configure Prometheus to scrape metrics from Kubernetes pods using annotations?
+36. What is the difference between `metric_relabel_configs` and `relabel_configs`?
+37. How do you check Prometheus's own health and readiness endpoints?
+38. What is the purpose of the `honor_labels` option in a scrape configuration?
+39. How do you configure a basic Alertmanager route to send alerts to an email receiver?
+40. What is the `blackbox_exporter` used for?
+41. How do you use the Prometheus HTTP API to query metrics programmatically?
+42. What is the `scrape_timeout` setting and what happens when it is exceeded?
+43. How do you configure Prometheus to use basic authentication for scraping a target?
+44. What is the purpose of the `external_labels` configuration in Prometheus?
+45. How do you write a PromQL query to calculate the error rate as a percentage of total requests?
+
+---
+
+## Intermediate Questions
+
+1. How do you implement Prometheus service discovery for AWS EC2 instances using the `ec2_sd_config`?
+2. Describe how you would configure Prometheus to scrape metrics from all pods in a Kubernetes namespace that have a specific annotation.
+3. How do you implement a multi-tier alerting strategy using Alertmanager's routing tree with different receivers for different severity levels?
+4. Explain how Prometheus's WAL (Write-Ahead Log) works and how it affects recovery after a crash.
+5. How do you configure Prometheus remote_write to send metrics to a Thanos Receive component?
+6. Describe how you would implement Prometheus HA with two replicas and configure Alertmanager deduplication.
+7. How do you use `label_replace()` to normalize inconsistent label values from different exporters?
+8. Explain how `histogram_quantile()` works and what the accuracy implications of bucket boundaries are.
+9. How do you implement recording rules to pre-compute expensive aggregations for dashboard performance?
+10. Describe how you would configure Prometheus to monitor a Kubernetes cluster's control plane components.
+11. How do you implement Alertmanager inhibition rules to suppress downstream alerts when a root cause alert is firing?
+12. How do you tune Prometheus's `--storage.tsdb.retention.size` versus `--storage.tsdb.retention.time`?
+13. Explain how Prometheus handles counter resets and how `rate()` accounts for them.
+14. How do you implement a Prometheus scrape configuration that uses TLS client certificates for authentication?
+15. Describe how you would use `predict_linear()` to alert on disk space exhaustion before it occurs.
+16. How do you configure Alertmanager grouping to reduce alert noise during a widespread infrastructure failure?
+17. How do you implement Prometheus monitoring for a stateful application running on Kubernetes with persistent volumes?
+18. Explain how `subquery` syntax works in PromQL and when you would use it.
+19. How do you implement Prometheus federation to pull specific metrics from application-level Prometheus instances into a platform-level instance?
+20. Describe how you would configure `metric_relabel_configs` to drop high-cardinality metrics before they are stored.
+21. How do you implement Prometheus Operator's `ServiceMonitor` and `PodMonitor` resources for automatic scrape configuration?
+22. How do you configure Alertmanager's `repeat_interval` and `group_interval` to balance notification frequency with alert noise?
+23. Explain how Prometheus's `staleness` handling works and how it affects dashboards when a target goes down.
+24. How do you implement a Prometheus scrape configuration that dynamically discovers targets from a Consul service registry?
+25. Describe how you would implement custom Prometheus metrics for tracking business KPIs in a microservices application.
+26. How do you use the Prometheus API to query the current state of all active alerts?
+27. How do you implement Prometheus monitoring for a Kubernetes Ingress controller, including request rate, error rate, and latency metrics?
+28. Explain how `offset` modifier works in PromQL and provide a use case for comparing current metrics with historical baselines.
+29. How do you configure Prometheus to scrape metrics from a service mesh (Istio) sidecar proxies?
+30. Describe how you would implement a Prometheus-based SLO monitoring setup using recording rules and multi-window burn rate alerts.
+31. How do you configure Prometheus's `--query.max-concurrency` and `--query.timeout` flags for a heavily loaded instance?
+32. How do you implement Prometheus monitoring for Kubernetes HPA (Horizontal Pod Autoscaler) using custom metrics?
+33. Explain how Prometheus handles high-availability for Alertmanager using the gossip protocol.
+34. How do you implement a Prometheus scrape configuration that handles targets with self-signed TLS certificates?
+35. Describe how you would use `group_left` and `group_right` in PromQL for many-to-one metric joins.
+36. How do you configure Prometheus to automatically discover and monitor new Kubernetes namespaces without manual configuration changes?
+37. How do you implement Prometheus alerting for Kubernetes node resource pressure (CPU, memory, disk)?
+38. Explain how the `@` modifier works in PromQL and when it is useful for incident analysis.
+39. How do you implement Prometheus monitoring for a multi-cluster Kubernetes environment using a central Prometheus instance?
+40. Describe how you would tune Prometheus's chunk encoding and block compaction settings for a write-heavy workload.
+
+---
+
+## Advanced Questions
+
+1. Design a Prometheus architecture for a 50,000-node infrastructure generating 500 million active time series, including sharding, federation, and long-term storage strategies.
+2. How do you implement a Prometheus-based multi-tenant monitoring platform where each tenant has isolated metrics, alerting, and dashboards, with strict data separation?
+3. Describe how you would implement a global Prometheus deployment using Thanos with cross-cluster querying, deduplication, and 2-year metric retention at petabyte scale.
+4. How do you implement a Prometheus cardinality governance system that automatically detects, alerts on, and enforces cardinality budgets per team and per service?
+5. Describe the complete failure modes of a Prometheus HA setup during a network partition, including the impact on alerting, data collection, and query availability.
+6. How do you implement a Prometheus-based anomaly detection system that uses statistical methods to detect metric anomalies without relying on static thresholds?
+7. Describe how you would implement a zero-trust security model for a Prometheus deployment, including mTLS for all scrape connections, RBAC for metric access, and audit logging.
+8. How do you implement a Prometheus deployment that can survive a complete cloud region failure with no data loss and sub-5-minute recovery time?
+9. Describe how you would implement a cost-optimized Prometheus architecture that reduces storage costs by 80% while maintaining 2-year metric retention and sub-second query performance.
+10. How do you implement Prometheus monitoring for a service mesh at scale (10,000 pods) where Istio telemetry is generating 50 million time series?
+11. Describe how you would implement a Prometheus-based capacity planning system that predicts resource exhaustion 30 days in advance across a 1,000-node Kubernetes cluster.
+12. How do you implement a Prometheus deployment that handles 10 million samples per second ingestion with consistent sub-100ms query latency for real-time dashboards?
+13. Describe how you would implement a Prometheus-based SLO platform that automatically calculates error budgets, burn rates, and SLO compliance for 500 services.
+14. How do you implement a Prometheus federation architecture that provides both global aggregated views and local high-resolution data without duplicating storage?
+15. Describe how you would implement a Prometheus deployment for a regulated financial services environment, including data encryption, access controls, and audit trails for compliance.
+16. How do you implement a Prometheus-based alerting system that uses machine learning to dynamically adjust alert thresholds based on historical patterns and seasonal variations?
+17. Describe how you would implement a Prometheus deployment that automatically scales horizontally based on ingestion rate, with automatic shard rebalancing and zero data loss.
+18. How do you implement a Prometheus-based observability platform for a multi-cloud environment (AWS, GCP, Azure) with unified metric naming, consistent labeling, and cross-cloud correlation?
+19. Describe how you would implement a Prometheus deployment that provides real-time metric streaming to downstream consumers (Kafka, Kinesis) while maintaining local storage for querying.
+20. How do you implement a Prometheus-based incident correlation system that automatically identifies related metric anomalies across different services and infrastructure layers during an incident?
+21. Describe how you would implement a Prometheus deployment that handles metric backfill for historical data import from legacy monitoring systems without disrupting ongoing ingestion.
+22. How do you implement a Prometheus-based change detection system that automatically correlates metric changes with deployment events, configuration changes, and infrastructure modifications?
+23. Describe how you would implement a Prometheus deployment for a Kubernetes multi-cluster environment with 100 clusters, providing both per-cluster and cross-cluster observability.
+24. How do you implement a Prometheus-based reliability engineering platform that automatically calculates MTTR, MTTF, and availability metrics for all services from incident data?
+25. Describe how you would implement a Prometheus deployment that provides sub-second metric freshness for real-time trading applications while maintaining 5-year historical retention.
+
+---
+
+## Rapid-Fire Questions
+
+1. What HTTP method does Prometheus use to scrape metrics from targets?
+2. What is the default scrape interval in Prometheus?
+3. Which metric type should you use to track the number of HTTP requests processed?
+4. What does `rate(http_requests_total[5m])` calculate?
+5. What port does `node_exporter` listen on by default?
+6. What is the purpose of the `__address__` label in Prometheus service discovery?
+7. How do you silence an alert in Alertmanager?
+8. What is the difference between `sum()` and `avg()` aggregation operators?
+9. What does a Prometheus target in "UNKNOWN" state indicate?
+10. What is the `stale marker` in Prometheus TSDB?
+11. How do you check the cardinality of a specific metric in Prometheus?
+12. What is the purpose of `honor_timestamps` in a scrape configuration?
+13. What does `topk(5, metric)` return?
+14. What is the Prometheus `/-/healthy` endpoint used for?
+15. What is the difference between `recording rules` and `alerting rules`?
+16. What does `increase(counter[1h])` calculate?
+17. What is the purpose of the `__metrics_path__` label?
+18. How do you query all time series with a specific label value in PromQL?
+19. What is the default evaluation interval for Prometheus rules?
+20. What does `vector(0)` return in PromQL?
+21. What is the purpose of `keep_firing_for` in an alert rule?
+22. How do you check which version of Prometheus is running?
+23. What is the `ALERTS` metric in Prometheus?
+24. What does `min_over_time(metric[1h])` calculate?
+25. What is the purpose of the `cluster` label in a federated Prometheus setup?
+26. What does `absent(up{job="myapp"})` return when the target is down?
+27. How do you list all active targets in Prometheus via the API?
+28. What is the difference between `label_replace()` and `label_join()`?
+29. What does `resets(counter[1h])` calculate?
+30. What is the purpose of `--storage.tsdb.allow-overlapping-blocks`?
+31. What does `quantile_over_time(0.99, metric[1h])` calculate?
+32. How do you check the WAL replay status after a Prometheus restart?
+33. What is the `prometheus_rule_evaluation_failures_total` metric used for?
+34. What does `clamp_min(metric, 0)` do in PromQL?
+35. What is the purpose of the `send_resolved` option in Alertmanager receivers?
+36. How do you query the number of active time series in Prometheus?
+37. What does `delta(gauge[1h])` calculate?
+38. What is the purpose of `--rules.alert.for-outage-tolerance` flag?
+39. What does `sort_desc(topk(10, metric))` return?
+40. What is the `prometheus_tsdb_compactions_total` metric used for?
+41. What does `bool` modifier do in a PromQL comparison?
+42. What is the purpose of `group_wait` in Alertmanager routing?
+43. How do you check if a recording rule is being evaluated correctly?
+44. What does `time()` return in PromQL?
+45. What is the purpose of `--web.console.templates` in Prometheus?
+46. What does `changes(gauge[1h])` calculate?
+47. What is the `prometheus_notifications_dropped_total` metric used for?
+48. How do you force a Prometheus TSDB compaction?
+49. What does `scalar(single_element_vector)` do in PromQL?
+50. What is the purpose of the `match[]` parameter in the Prometheus federation endpoint?
+
+---
+
+
 ## PromQL & Query Optimization
 
 1. Your `rate()` calculation for a counter metric is returning unexpected spikes after a pod restart. How do you diagnose whether this is a counter reset issue or a genuine traffic spike, and what PromQL adjustments would you make?
@@ -201,180 +382,3 @@
 
 ---
 
-## Basic Questions
-
-1. What is Prometheus and what problem does it solve in a monitoring context?
-2. Explain the difference between a counter, gauge, histogram, and summary metric type in Prometheus.
-3. What is a scrape interval and how does Prometheus collect metrics from targets?
-4. What is the default port Prometheus listens on, and where is its configuration file located?
-5. What is a Prometheus exporter? Give three examples of commonly used exporters.
-6. How do you define a static scrape target in `prometheus.yml`?
-7. What is PromQL and what is it used for?
-8. Explain what a label is in Prometheus and why labels are important.
-9. What is the purpose of the Alertmanager in the Prometheus ecosystem?
-10. How do you check if a Prometheus target is being scraped successfully?
-11. What does the `up` metric in Prometheus represent?
-12. What is the difference between `rate()` and `irate()` in PromQL?
-13. How do you write a basic PromQL query to get the total HTTP request count for a service?
-14. What is a recording rule in Prometheus and why would you use one?
-15. What is the Pushgateway and when should it be used?
-16. How do you define an alert rule in Prometheus?
-17. What is the `for` clause in a Prometheus alert rule?
-18. What does `prometheus_tsdb_head_series` metric tell you?
-19. How do you reload Prometheus configuration without restarting the process?
-20. What is service discovery in Prometheus and name two supported service discovery mechanisms?
-21. What is the purpose of `relabel_configs` in a scrape configuration?
-22. How does Prometheus store data locally, and what is the default retention period?
-23. What is the difference between `sum()` and `count()` aggregation operators in PromQL?
-24. How do you filter metrics by label value in a PromQL query?
-25. What is a Prometheus federation and when would you use it?
-26. What is the purpose of the `--web.enable-lifecycle` flag in Prometheus?
-27. How do you expose custom application metrics using the Prometheus client library?
-28. What is the `node_exporter` and what types of metrics does it expose?
-29. How do you configure Alertmanager to send notifications to Slack?
-30. What is the difference between `increase()` and `rate()` in PromQL?
-31. What does the `absent()` function do in PromQL?
-32. How do you query the top 5 services by request rate in PromQL?
-33. What is a Prometheus data model and how are time series identified?
-34. What is the `kube-state-metrics` exporter used for in Kubernetes monitoring?
-35. How do you configure Prometheus to scrape metrics from Kubernetes pods using annotations?
-36. What is the difference between `metric_relabel_configs` and `relabel_configs`?
-37. How do you check Prometheus's own health and readiness endpoints?
-38. What is the purpose of the `honor_labels` option in a scrape configuration?
-39. How do you configure a basic Alertmanager route to send alerts to an email receiver?
-40. What is the `blackbox_exporter` used for?
-41. How do you use the Prometheus HTTP API to query metrics programmatically?
-42. What is the `scrape_timeout` setting and what happens when it is exceeded?
-43. How do you configure Prometheus to use basic authentication for scraping a target?
-44. What is the purpose of the `external_labels` configuration in Prometheus?
-45. How do you write a PromQL query to calculate the error rate as a percentage of total requests?
-
----
-
-## Intermediate Questions
-
-1. How do you implement Prometheus service discovery for AWS EC2 instances using the `ec2_sd_config`?
-2. Describe how you would configure Prometheus to scrape metrics from all pods in a Kubernetes namespace that have a specific annotation.
-3. How do you implement a multi-tier alerting strategy using Alertmanager's routing tree with different receivers for different severity levels?
-4. Explain how Prometheus's WAL (Write-Ahead Log) works and how it affects recovery after a crash.
-5. How do you configure Prometheus remote_write to send metrics to a Thanos Receive component?
-6. Describe how you would implement Prometheus HA with two replicas and configure Alertmanager deduplication.
-7. How do you use `label_replace()` to normalize inconsistent label values from different exporters?
-8. Explain how `histogram_quantile()` works and what the accuracy implications of bucket boundaries are.
-9. How do you implement recording rules to pre-compute expensive aggregations for dashboard performance?
-10. Describe how you would configure Prometheus to monitor a Kubernetes cluster's control plane components.
-11. How do you implement Alertmanager inhibition rules to suppress downstream alerts when a root cause alert is firing?
-12. How do you tune Prometheus's `--storage.tsdb.retention.size` versus `--storage.tsdb.retention.time`?
-13. Explain how Prometheus handles counter resets and how `rate()` accounts for them.
-14. How do you implement a Prometheus scrape configuration that uses TLS client certificates for authentication?
-15. Describe how you would use `predict_linear()` to alert on disk space exhaustion before it occurs.
-16. How do you configure Alertmanager grouping to reduce alert noise during a widespread infrastructure failure?
-17. How do you implement Prometheus monitoring for a stateful application running on Kubernetes with persistent volumes?
-18. Explain how `subquery` syntax works in PromQL and when you would use it.
-19. How do you implement Prometheus federation to pull specific metrics from application-level Prometheus instances into a platform-level instance?
-20. Describe how you would configure `metric_relabel_configs` to drop high-cardinality metrics before they are stored.
-21. How do you implement Prometheus Operator's `ServiceMonitor` and `PodMonitor` resources for automatic scrape configuration?
-22. How do you configure Alertmanager's `repeat_interval` and `group_interval` to balance notification frequency with alert noise?
-23. Explain how Prometheus's `staleness` handling works and how it affects dashboards when a target goes down.
-24. How do you implement a Prometheus scrape configuration that dynamically discovers targets from a Consul service registry?
-25. Describe how you would implement custom Prometheus metrics for tracking business KPIs in a microservices application.
-26. How do you use the Prometheus API to query the current state of all active alerts?
-27. How do you implement Prometheus monitoring for a Kubernetes Ingress controller, including request rate, error rate, and latency metrics?
-28. Explain how `offset` modifier works in PromQL and provide a use case for comparing current metrics with historical baselines.
-29. How do you configure Prometheus to scrape metrics from a service mesh (Istio) sidecar proxies?
-30. Describe how you would implement a Prometheus-based SLO monitoring setup using recording rules and multi-window burn rate alerts.
-31. How do you configure Prometheus's `--query.max-concurrency` and `--query.timeout` flags for a heavily loaded instance?
-32. How do you implement Prometheus monitoring for Kubernetes HPA (Horizontal Pod Autoscaler) using custom metrics?
-33. Explain how Prometheus handles high-availability for Alertmanager using the gossip protocol.
-34. How do you implement a Prometheus scrape configuration that handles targets with self-signed TLS certificates?
-35. Describe how you would use `group_left` and `group_right` in PromQL for many-to-one metric joins.
-36. How do you configure Prometheus to automatically discover and monitor new Kubernetes namespaces without manual configuration changes?
-37. How do you implement Prometheus alerting for Kubernetes node resource pressure (CPU, memory, disk)?
-38. Explain how the `@` modifier works in PromQL and when it is useful for incident analysis.
-39. How do you implement Prometheus monitoring for a multi-cluster Kubernetes environment using a central Prometheus instance?
-40. Describe how you would tune Prometheus's chunk encoding and block compaction settings for a write-heavy workload.
-
----
-
-## Advanced Questions
-
-1. Design a Prometheus architecture for a 50,000-node infrastructure generating 500 million active time series, including sharding, federation, and long-term storage strategies.
-2. How do you implement a Prometheus-based multi-tenant monitoring platform where each tenant has isolated metrics, alerting, and dashboards, with strict data separation?
-3. Describe how you would implement a global Prometheus deployment using Thanos with cross-cluster querying, deduplication, and 2-year metric retention at petabyte scale.
-4. How do you implement a Prometheus cardinality governance system that automatically detects, alerts on, and enforces cardinality budgets per team and per service?
-5. Describe the complete failure modes of a Prometheus HA setup during a network partition, including the impact on alerting, data collection, and query availability.
-6. How do you implement a Prometheus-based anomaly detection system that uses statistical methods to detect metric anomalies without relying on static thresholds?
-7. Describe how you would implement a zero-trust security model for a Prometheus deployment, including mTLS for all scrape connections, RBAC for metric access, and audit logging.
-8. How do you implement a Prometheus deployment that can survive a complete cloud region failure with no data loss and sub-5-minute recovery time?
-9. Describe how you would implement a cost-optimized Prometheus architecture that reduces storage costs by 80% while maintaining 2-year metric retention and sub-second query performance.
-10. How do you implement Prometheus monitoring for a service mesh at scale (10,000 pods) where Istio telemetry is generating 50 million time series?
-11. Describe how you would implement a Prometheus-based capacity planning system that predicts resource exhaustion 30 days in advance across a 1,000-node Kubernetes cluster.
-12. How do you implement a Prometheus deployment that handles 10 million samples per second ingestion with consistent sub-100ms query latency for real-time dashboards?
-13. Describe how you would implement a Prometheus-based SLO platform that automatically calculates error budgets, burn rates, and SLO compliance for 500 services.
-14. How do you implement a Prometheus federation architecture that provides both global aggregated views and local high-resolution data without duplicating storage?
-15. Describe how you would implement a Prometheus deployment for a regulated financial services environment, including data encryption, access controls, and audit trails for compliance.
-16. How do you implement a Prometheus-based alerting system that uses machine learning to dynamically adjust alert thresholds based on historical patterns and seasonal variations?
-17. Describe how you would implement a Prometheus deployment that automatically scales horizontally based on ingestion rate, with automatic shard rebalancing and zero data loss.
-18. How do you implement a Prometheus-based observability platform for a multi-cloud environment (AWS, GCP, Azure) with unified metric naming, consistent labeling, and cross-cloud correlation?
-19. Describe how you would implement a Prometheus deployment that provides real-time metric streaming to downstream consumers (Kafka, Kinesis) while maintaining local storage for querying.
-20. How do you implement a Prometheus-based incident correlation system that automatically identifies related metric anomalies across different services and infrastructure layers during an incident?
-21. Describe how you would implement a Prometheus deployment that handles metric backfill for historical data import from legacy monitoring systems without disrupting ongoing ingestion.
-22. How do you implement a Prometheus-based change detection system that automatically correlates metric changes with deployment events, configuration changes, and infrastructure modifications?
-23. Describe how you would implement a Prometheus deployment for a Kubernetes multi-cluster environment with 100 clusters, providing both per-cluster and cross-cluster observability.
-24. How do you implement a Prometheus-based reliability engineering platform that automatically calculates MTTR, MTTF, and availability metrics for all services from incident data?
-25. Describe how you would implement a Prometheus deployment that provides sub-second metric freshness for real-time trading applications while maintaining 5-year historical retention.
-
----
-
-## Rapid-Fire Questions
-
-1. What HTTP method does Prometheus use to scrape metrics from targets?
-2. What is the default scrape interval in Prometheus?
-3. Which metric type should you use to track the number of HTTP requests processed?
-4. What does `rate(http_requests_total[5m])` calculate?
-5. What port does `node_exporter` listen on by default?
-6. What is the purpose of the `__address__` label in Prometheus service discovery?
-7. How do you silence an alert in Alertmanager?
-8. What is the difference between `sum()` and `avg()` aggregation operators?
-9. What does a Prometheus target in "UNKNOWN" state indicate?
-10. What is the `stale marker` in Prometheus TSDB?
-11. How do you check the cardinality of a specific metric in Prometheus?
-12. What is the purpose of `honor_timestamps` in a scrape configuration?
-13. What does `topk(5, metric)` return?
-14. What is the Prometheus `/-/healthy` endpoint used for?
-15. What is the difference between `recording rules` and `alerting rules`?
-16. What does `increase(counter[1h])` calculate?
-17. What is the purpose of the `__metrics_path__` label?
-18. How do you query all time series with a specific label value in PromQL?
-19. What is the default evaluation interval for Prometheus rules?
-20. What does `vector(0)` return in PromQL?
-21. What is the purpose of `keep_firing_for` in an alert rule?
-22. How do you check which version of Prometheus is running?
-23. What is the `ALERTS` metric in Prometheus?
-24. What does `min_over_time(metric[1h])` calculate?
-25. What is the purpose of the `cluster` label in a federated Prometheus setup?
-26. What does `absent(up{job="myapp"})` return when the target is down?
-27. How do you list all active targets in Prometheus via the API?
-28. What is the difference between `label_replace()` and `label_join()`?
-29. What does `resets(counter[1h])` calculate?
-30. What is the purpose of `--storage.tsdb.allow-overlapping-blocks`?
-31. What does `quantile_over_time(0.99, metric[1h])` calculate?
-32. How do you check the WAL replay status after a Prometheus restart?
-33. What is the `prometheus_rule_evaluation_failures_total` metric used for?
-34. What does `clamp_min(metric, 0)` do in PromQL?
-35. What is the purpose of the `send_resolved` option in Alertmanager receivers?
-36. How do you query the number of active time series in Prometheus?
-37. What does `delta(gauge[1h])` calculate?
-38. What is the purpose of `--rules.alert.for-outage-tolerance` flag?
-39. What does `sort_desc(topk(10, metric))` return?
-40. What is the `prometheus_tsdb_compactions_total` metric used for?
-41. What does `bool` modifier do in a PromQL comparison?
-42. What is the purpose of `group_wait` in Alertmanager routing?
-43. How do you check if a recording rule is being evaluated correctly?
-44. What does `time()` return in PromQL?
-45. What is the purpose of `--web.console.templates` in Prometheus?
-46. What does `changes(gauge[1h])` calculate?
-47. What is the `prometheus_notifications_dropped_total` metric used for?
-48. How do you force a Prometheus TSDB compaction?
-49. What does `scalar(single_element_vector)` do in PromQL?
-50. What is the purpose of the `match[]` parameter in the Prometheus federation endpoint?

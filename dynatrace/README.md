@@ -5,6 +5,188 @@
 
 ---
 
+
+
+## Basic Questions
+
+1. What is Dynatrace and what differentiates it from traditional monitoring tools?
+2. What is the Dynatrace OneAgent and how does it collect monitoring data?
+3. What is the Dynatrace SaaS deployment model and how does it differ from Managed?
+4. What is a Dynatrace entity and give four examples of entity types?
+5. What is the purpose of Dynatrace's Smartscape topology map?
+6. What is Davis AI and what is its primary function in Dynatrace?
+7. What is a Dynatrace problem card and what information does it contain?
+8. What is the purpose of Dynatrace's service flow analysis?
+9. What is a Dynatrace management zone and when would you use one?
+10. What is the difference between Dynatrace's full-stack monitoring and infrastructure monitoring?
+11. What is a Dynatrace SLO and how do you configure one?
+12. What is the purpose of Dynatrace's synthetic monitoring?
+13. What is Dynatrace RUM (Real User Monitoring) and what does it measure?
+14. What is the purpose of Dynatrace's distributed tracing (PurePath)?
+15. What is a Dynatrace tag and how do you apply one to an entity?
+16. What is the purpose of Dynatrace's anomaly detection?
+17. What is a Dynatrace dashboard and how do you create one?
+18. What is the purpose of Dynatrace's alerting profiles?
+19. What is the Dynatrace ActiveGate and when is it required?
+20. What is the purpose of Dynatrace's host monitoring?
+21. What is a Dynatrace metric event and how does it differ from a problem notification?
+22. What is the purpose of Dynatrace's process group monitoring?
+23. What is the Dynatrace API and what can you do with it?
+24. What is the purpose of Dynatrace's network monitoring?
+25. What is a Dynatrace maintenance window and when would you use one?
+26. What is the purpose of Dynatrace's log monitoring?
+27. What is the Dynatrace Operator for Kubernetes and what does it deploy?
+28. What is the purpose of Dynatrace's database monitoring?
+29. What is a Dynatrace calculated service metric and when would you use one?
+30. What is the purpose of Dynatrace's cloud infrastructure monitoring?
+31. What is the Dynatrace OneAgent Operator and how does it manage agent deployments?
+32. What is the purpose of Dynatrace's application security monitoring?
+33. What is a Dynatrace custom device and when would you create one?
+34. What is the purpose of Dynatrace's business analytics feature?
+35. What is the Dynatrace Grail data lakehouse and what does it store?
+36. What is the purpose of Dynatrace's session replay feature?
+37. What is a Dynatrace extension and how do you install one?
+38. What is the purpose of Dynatrace's infrastructure observability?
+39. What is the Dynatrace DQL (Dynatrace Query Language) used for?
+40. What is the purpose of Dynatrace's workflow automation feature?
+41. What is a Dynatrace site reliability guardian and what does it do?
+42. What is the purpose of Dynatrace's Davis anomaly detection baseline?
+43. What is the Dynatrace Hub and what resources does it provide?
+44. What is the purpose of Dynatrace's ownership feature?
+45. What is the Dynatrace Notebooks feature used for?
+
+---
+
+## Intermediate Questions
+
+1. How do you implement Dynatrace's OneAgent deployment for a Kubernetes cluster using the Dynatrace Operator with CloudNativeFullStack mode?
+2. Describe how you would configure Dynatrace's management zones to implement team-based access control for a 50-team organization.
+3. How do you implement Dynatrace's SLO monitoring with error budget tracking and burn rate alerting?
+4. Explain how Dynatrace's Davis AI causal analysis works and how you configure it for better root cause accuracy.
+5. How do you implement Dynatrace's distributed tracing for asynchronous message-based communication using Kafka?
+6. Describe how you would configure Dynatrace's synthetic monitoring for a complex multi-step user journey with authentication.
+7. How do you implement Dynatrace's custom metrics ingestion using the Metrics API for business KPI monitoring?
+8. Explain how Dynatrace's service detection rules work and how you configure them for microservices with shared processes.
+9. How do you implement Dynatrace's alerting profiles to route different problem types to different notification channels?
+10. Describe how you would configure Dynatrace's RUM for a single-page application with client-side routing.
+11. How do you implement Dynatrace's log monitoring integration with Davis AI for log-based anomaly detection?
+12. Explain how Dynatrace's PurePath distributed tracing captures end-to-end transaction data automatically.
+13. How do you implement Dynatrace's Kubernetes workload monitoring with custom resource tracking?
+14. Describe how you would configure Dynatrace's application security monitoring for runtime vulnerability detection.
+15. How do you implement Dynatrace's business analytics for tracking conversion rates and revenue impact of performance issues?
+16. Explain how Dynatrace's calculated service metrics work for creating custom aggregations from captured data.
+17. How do you implement Dynatrace's maintenance windows programmatically using the API for CI/CD integration?
+18. Describe how you would configure Dynatrace's network monitoring for detecting service mesh communication issues.
+19. How do you implement Dynatrace's tagging strategy for automatic tag inheritance across entity hierarchies?
+20. Explain how Dynatrace's anomaly detection sensitivity settings affect false positive and false negative rates.
+21. How do you implement Dynatrace's workflow automation for automatic remediation of common infrastructure issues?
+22. Describe how you would configure Dynatrace's Davis AI for a service with highly variable traffic patterns.
+23. How do you implement Dynatrace's OpenTelemetry integration for services that cannot be instrumented with OneAgent?
+24. Explain how Dynatrace's Smartscape topology is built and how it helps during incident investigation.
+25. How do you implement Dynatrace's session replay with GDPR-compliant data masking for PII protection?
+26. Describe how you would configure Dynatrace's cloud infrastructure monitoring for AWS multi-account environments.
+27. How do you implement Dynatrace's DQL queries for custom analytics and reporting in Notebooks?
+28. Explain how Dynatrace's site reliability guardian works for automated deployment quality gates.
+29. How do you implement Dynatrace's extension framework for monitoring custom technologies not supported natively?
+30. Describe how you would configure Dynatrace's problem notification integration with PagerDuty for on-call alerting.
+31. How do you implement Dynatrace's real user monitoring for Core Web Vitals tracking and alerting?
+32. Explain how Dynatrace's Grail data lakehouse differs from traditional time-series storage for observability data.
+33. How do you implement Dynatrace's ownership feature for automatic alert routing based on service ownership metadata?
+34. Describe how you would configure Dynatrace's synthetic monitoring for global availability checking from 30 locations.
+35. How do you implement Dynatrace's infrastructure monitoring for on-premises VMware environments?
+36. Explain how Dynatrace's automatic baseline learning adapts to seasonal traffic patterns.
+37. How do you implement Dynatrace's API monitoring for validating API response correctness beyond availability.
+38. Describe how you would configure Dynatrace's log monitoring for structured JSON log parsing and field extraction.
+39. How do you implement Dynatrace's Kubernetes cluster monitoring for multi-cluster environments with unified visibility?
+40. Explain how Dynatrace's problem correlation works to group related anomalies into a single problem card.
+
+---
+
+## Advanced Questions
+
+1. Design a Dynatrace deployment for a 10,000-node enterprise infrastructure spanning on-premises, AWS, GCP, and Azure, including OneAgent deployment strategy, ActiveGate topology, and management zone design.
+2. How do you implement a Dynatrace-based SRE platform that automatically calculates error budgets, tracks SLO compliance, and generates reliability reports for 500 services?
+3. Describe how you would implement Dynatrace's Davis AI for a complex microservices architecture where cascading failures frequently generate hundreds of correlated problems, ensuring accurate root cause identification.
+4. How do you implement a Dynatrace deployment that provides real-time business impact analysis during incidents, correlating technical metrics with revenue impact and user experience degradation?
+5. Describe how you would implement Dynatrace's Kubernetes monitoring for a 100-cluster environment, providing both per-cluster and cross-cluster observability with automatic workload discovery.
+6. How do you implement a Dynatrace-based incident response platform that automatically creates war rooms, notifies on-call teams, and provides pre-populated investigation dashboards when critical problems are detected?
+7. Describe how you would implement Dynatrace's application security monitoring for a zero-trust architecture, including runtime vulnerability detection, attack path analysis, and automated remediation.
+8. How do you implement a Dynatrace deployment for a financial services company with strict compliance requirements, including data residency, access auditing, and regulatory reporting?
+9. Describe how you would implement Dynatrace's synthetic monitoring for a global e-commerce platform with 200 critical user journeys, including performance budgets and automated regression detection.
+10. How do you implement a Dynatrace-based chaos engineering observability platform that measures the blast radius of chaos experiments and validates system resilience against SLO targets?
+11. Describe how you would implement Dynatrace's OpenTelemetry integration at scale for a polyglot microservices architecture with 500 services using 10 different programming languages.
+12. How do you implement a Dynatrace deployment that provides real-time capacity planning recommendations based on resource utilization trends and predicted traffic growth?
+13. Describe how you would implement Dynatrace's workflow automation for a self-healing infrastructure that automatically remediates common failure patterns without human intervention.
+14. How do you implement a Dynatrace-based DevOps platform that integrates with CI/CD pipelines to automatically validate deployment quality using site reliability guardians and performance benchmarks?
+15. Describe how you would implement Dynatrace's business analytics for a retail company, correlating application performance with conversion rates, cart abandonment, and revenue impact in real-time.
+16. How do you implement a Dynatrace deployment that handles monitoring for a serverless architecture (AWS Lambda, Azure Functions) where traditional agent-based monitoring is not applicable?
+17. Describe how you would implement Dynatrace's security analytics for detecting and responding to runtime attacks, including injection attacks, data exfiltration, and privilege escalation.
+18. How do you implement a Dynatrace-based cost optimization platform that correlates infrastructure costs with application performance to identify over-provisioned resources and optimization opportunities?
+19. Describe how you would implement Dynatrace's distributed tracing for a complex event-driven architecture with multiple message queues, ensuring complete trace continuity across asynchronous boundaries.
+20. How do you implement a Dynatrace deployment that provides unified observability for a hybrid cloud migration, monitoring both legacy on-premises systems and new cloud-native services simultaneously?
+21. Describe how you would implement Dynatrace's Davis AI for predictive incident detection, identifying potential failures 30 minutes before they impact users based on leading indicators.
+22. How do you implement a Dynatrace-based platform engineering observability system that provides golden path templates for service instrumentation, ensuring consistent monitoring standards across all teams?
+23. Describe how you would implement Dynatrace's RUM and synthetic monitoring together for a comprehensive user experience monitoring strategy that covers both real and simulated user journeys.
+24. How do you implement a Dynatrace deployment for a multi-tenant SaaS platform, providing per-tenant observability while maintaining data isolation and enabling platform-level cross-tenant analysis?
+25. Describe how you would implement Dynatrace's Grail data lakehouse for long-term observability data retention, enabling historical analysis, compliance reporting, and machine learning model training.
+
+---
+
+## Rapid-Fire Questions
+
+1. What does OneAgent automatically discover without manual configuration?
+2. What is the purpose of Dynatrace's `problem.open` event in webhook notifications?
+3. What does Davis AI stand for in Dynatrace?
+4. What is the purpose of Dynatrace's `management zone` feature?
+5. What does Dynatrace's `Smartscape` visualize?
+6. What is the purpose of Dynatrace's `ActiveGate`?
+7. What does Dynatrace's `PurePath` technology capture?
+8. What is the purpose of Dynatrace's `synthetic monitor`?
+9. What does Dynatrace's `RUM` measure?
+10. What is the purpose of Dynatrace's `SLO` feature?
+11. What does Dynatrace's `anomaly detection` baseline on?
+12. What is the purpose of Dynatrace's `tagging` feature?
+13. What does Dynatrace's `service flow` diagram show?
+14. What is the purpose of Dynatrace's `maintenance window`?
+15. What does Dynatrace's `problem card` contain?
+16. What is the purpose of Dynatrace's `alerting profile`?
+17. What does Dynatrace's `calculated service metric` create?
+18. What is the purpose of Dynatrace's `ownership` feature?
+19. What does Dynatrace's `Davis AI` root cause analysis identify?
+20. What is the purpose of Dynatrace's `workflow automation`?
+21. What does Dynatrace's `session replay` capture?
+22. What is the purpose of Dynatrace's `site reliability guardian`?
+23. What does Dynatrace's `DQL` query language access?
+24. What is the purpose of Dynatrace's `Grail` data lakehouse?
+25. What does Dynatrace's `Notebooks` feature provide?
+26. What is the purpose of Dynatrace's `extension framework`?
+27. What does Dynatrace's `application security` feature detect?
+28. What is the purpose of Dynatrace's `business analytics`?
+29. What does Dynatrace's `infrastructure monitoring` cover?
+30. What is the purpose of Dynatrace's `log monitoring`?
+31. What does Dynatrace's `network monitoring` detect?
+32. What is the purpose of Dynatrace's `cloud infrastructure monitoring`?
+33. What does Dynatrace's `Kubernetes monitoring` track?
+34. What is the purpose of Dynatrace's `database monitoring`?
+35. What does Dynatrace's `process group` represent?
+36. What is the purpose of Dynatrace's `host group`?
+37. What does Dynatrace's `service detection rule` configure?
+38. What is the purpose of Dynatrace's `custom device`?
+39. What does Dynatrace's `metric event` trigger?
+40. What is the purpose of Dynatrace's `problem notification`?
+41. What does Dynatrace's `deployment event` track?
+42. What is the purpose of Dynatrace's `configuration event`?
+43. What does Dynatrace's `availability event` indicate?
+44. What is the purpose of Dynatrace's `custom event`?
+45. What does Dynatrace's `error event` capture?
+46. What is the purpose of Dynatrace's `performance event`?
+47. What does Dynatrace's `resource contention event` indicate?
+48. What is the purpose of Dynatrace's `slowdown event`?
+49. What does Dynatrace's `unexpected high traffic event` indicate?
+50. What is the purpose of Dynatrace's `low traffic event`?
+
+--- 
+
 ## OneAgent Deployment & Management
 
 1. A Dynatrace OneAgent deployed on a production Linux host is consuming 15% CPU continuously. How do you diagnose whether this is a OneAgent configuration issue, a high-traffic application issue, or a Dynatrace platform issue, and how do you tune OneAgent resource consumption?
@@ -204,181 +386,3 @@
 78. How do you implement Dynatrace's load testing integration to correlate performance test results with production monitoring data, ensuring that load test findings are representative of production behavior?
 
 ---
-
-## Basic Questions
-
-1. What is Dynatrace and what differentiates it from traditional monitoring tools?
-2. What is the Dynatrace OneAgent and how does it collect monitoring data?
-3. What is the Dynatrace SaaS deployment model and how does it differ from Managed?
-4. What is a Dynatrace entity and give four examples of entity types?
-5. What is the purpose of Dynatrace's Smartscape topology map?
-6. What is Davis AI and what is its primary function in Dynatrace?
-7. What is a Dynatrace problem card and what information does it contain?
-8. What is the purpose of Dynatrace's service flow analysis?
-9. What is a Dynatrace management zone and when would you use one?
-10. What is the difference between Dynatrace's full-stack monitoring and infrastructure monitoring?
-11. What is a Dynatrace SLO and how do you configure one?
-12. What is the purpose of Dynatrace's synthetic monitoring?
-13. What is Dynatrace RUM (Real User Monitoring) and what does it measure?
-14. What is the purpose of Dynatrace's distributed tracing (PurePath)?
-15. What is a Dynatrace tag and how do you apply one to an entity?
-16. What is the purpose of Dynatrace's anomaly detection?
-17. What is a Dynatrace dashboard and how do you create one?
-18. What is the purpose of Dynatrace's alerting profiles?
-19. What is the Dynatrace ActiveGate and when is it required?
-20. What is the purpose of Dynatrace's host monitoring?
-21. What is a Dynatrace metric event and how does it differ from a problem notification?
-22. What is the purpose of Dynatrace's process group monitoring?
-23. What is the Dynatrace API and what can you do with it?
-24. What is the purpose of Dynatrace's network monitoring?
-25. What is a Dynatrace maintenance window and when would you use one?
-26. What is the purpose of Dynatrace's log monitoring?
-27. What is the Dynatrace Operator for Kubernetes and what does it deploy?
-28. What is the purpose of Dynatrace's database monitoring?
-29. What is a Dynatrace calculated service metric and when would you use one?
-30. What is the purpose of Dynatrace's cloud infrastructure monitoring?
-31. What is the Dynatrace OneAgent Operator and how does it manage agent deployments?
-32. What is the purpose of Dynatrace's application security monitoring?
-33. What is a Dynatrace custom device and when would you create one?
-34. What is the purpose of Dynatrace's business analytics feature?
-35. What is the Dynatrace Grail data lakehouse and what does it store?
-36. What is the purpose of Dynatrace's session replay feature?
-37. What is a Dynatrace extension and how do you install one?
-38. What is the purpose of Dynatrace's infrastructure observability?
-39. What is the Dynatrace DQL (Dynatrace Query Language) used for?
-40. What is the purpose of Dynatrace's workflow automation feature?
-41. What is a Dynatrace site reliability guardian and what does it do?
-42. What is the purpose of Dynatrace's Davis anomaly detection baseline?
-43. What is the Dynatrace Hub and what resources does it provide?
-44. What is the purpose of Dynatrace's ownership feature?
-45. What is the Dynatrace Notebooks feature used for?
-
----
-
-## Intermediate Questions
-
-1. How do you implement Dynatrace's OneAgent deployment for a Kubernetes cluster using the Dynatrace Operator with CloudNativeFullStack mode?
-2. Describe how you would configure Dynatrace's management zones to implement team-based access control for a 50-team organization.
-3. How do you implement Dynatrace's SLO monitoring with error budget tracking and burn rate alerting?
-4. Explain how Dynatrace's Davis AI causal analysis works and how you configure it for better root cause accuracy.
-5. How do you implement Dynatrace's distributed tracing for asynchronous message-based communication using Kafka?
-6. Describe how you would configure Dynatrace's synthetic monitoring for a complex multi-step user journey with authentication.
-7. How do you implement Dynatrace's custom metrics ingestion using the Metrics API for business KPI monitoring?
-8. Explain how Dynatrace's service detection rules work and how you configure them for microservices with shared processes.
-9. How do you implement Dynatrace's alerting profiles to route different problem types to different notification channels?
-10. Describe how you would configure Dynatrace's RUM for a single-page application with client-side routing.
-11. How do you implement Dynatrace's log monitoring integration with Davis AI for log-based anomaly detection?
-12. Explain how Dynatrace's PurePath distributed tracing captures end-to-end transaction data automatically.
-13. How do you implement Dynatrace's Kubernetes workload monitoring with custom resource tracking?
-14. Describe how you would configure Dynatrace's application security monitoring for runtime vulnerability detection.
-15. How do you implement Dynatrace's business analytics for tracking conversion rates and revenue impact of performance issues?
-16. Explain how Dynatrace's calculated service metrics work for creating custom aggregations from captured data.
-17. How do you implement Dynatrace's maintenance windows programmatically using the API for CI/CD integration?
-18. Describe how you would configure Dynatrace's network monitoring for detecting service mesh communication issues.
-19. How do you implement Dynatrace's tagging strategy for automatic tag inheritance across entity hierarchies?
-20. Explain how Dynatrace's anomaly detection sensitivity settings affect false positive and false negative rates.
-21. How do you implement Dynatrace's workflow automation for automatic remediation of common infrastructure issues?
-22. Describe how you would configure Dynatrace's Davis AI for a service with highly variable traffic patterns.
-23. How do you implement Dynatrace's OpenTelemetry integration for services that cannot be instrumented with OneAgent?
-24. Explain how Dynatrace's Smartscape topology is built and how it helps during incident investigation.
-25. How do you implement Dynatrace's session replay with GDPR-compliant data masking for PII protection?
-26. Describe how you would configure Dynatrace's cloud infrastructure monitoring for AWS multi-account environments.
-27. How do you implement Dynatrace's DQL queries for custom analytics and reporting in Notebooks?
-28. Explain how Dynatrace's site reliability guardian works for automated deployment quality gates.
-29. How do you implement Dynatrace's extension framework for monitoring custom technologies not supported natively?
-30. Describe how you would configure Dynatrace's problem notification integration with PagerDuty for on-call alerting.
-31. How do you implement Dynatrace's real user monitoring for Core Web Vitals tracking and alerting?
-32. Explain how Dynatrace's Grail data lakehouse differs from traditional time-series storage for observability data.
-33. How do you implement Dynatrace's ownership feature for automatic alert routing based on service ownership metadata?
-34. Describe how you would configure Dynatrace's synthetic monitoring for global availability checking from 30 locations.
-35. How do you implement Dynatrace's infrastructure monitoring for on-premises VMware environments?
-36. Explain how Dynatrace's automatic baseline learning adapts to seasonal traffic patterns.
-37. How do you implement Dynatrace's API monitoring for validating API response correctness beyond availability.
-38. Describe how you would configure Dynatrace's log monitoring for structured JSON log parsing and field extraction.
-39. How do you implement Dynatrace's Kubernetes cluster monitoring for multi-cluster environments with unified visibility?
-40. Explain how Dynatrace's problem correlation works to group related anomalies into a single problem card.
-
----
-
-## Advanced Questions
-
-1. Design a Dynatrace deployment for a 10,000-node enterprise infrastructure spanning on-premises, AWS, GCP, and Azure, including OneAgent deployment strategy, ActiveGate topology, and management zone design.
-2. How do you implement a Dynatrace-based SRE platform that automatically calculates error budgets, tracks SLO compliance, and generates reliability reports for 500 services?
-3. Describe how you would implement Dynatrace's Davis AI for a complex microservices architecture where cascading failures frequently generate hundreds of correlated problems, ensuring accurate root cause identification.
-4. How do you implement a Dynatrace deployment that provides real-time business impact analysis during incidents, correlating technical metrics with revenue impact and user experience degradation?
-5. Describe how you would implement Dynatrace's Kubernetes monitoring for a 100-cluster environment, providing both per-cluster and cross-cluster observability with automatic workload discovery.
-6. How do you implement a Dynatrace-based incident response platform that automatically creates war rooms, notifies on-call teams, and provides pre-populated investigation dashboards when critical problems are detected?
-7. Describe how you would implement Dynatrace's application security monitoring for a zero-trust architecture, including runtime vulnerability detection, attack path analysis, and automated remediation.
-8. How do you implement a Dynatrace deployment for a financial services company with strict compliance requirements, including data residency, access auditing, and regulatory reporting?
-9. Describe how you would implement Dynatrace's synthetic monitoring for a global e-commerce platform with 200 critical user journeys, including performance budgets and automated regression detection.
-10. How do you implement a Dynatrace-based chaos engineering observability platform that measures the blast radius of chaos experiments and validates system resilience against SLO targets?
-11. Describe how you would implement Dynatrace's OpenTelemetry integration at scale for a polyglot microservices architecture with 500 services using 10 different programming languages.
-12. How do you implement a Dynatrace deployment that provides real-time capacity planning recommendations based on resource utilization trends and predicted traffic growth?
-13. Describe how you would implement Dynatrace's workflow automation for a self-healing infrastructure that automatically remediates common failure patterns without human intervention.
-14. How do you implement a Dynatrace-based DevOps platform that integrates with CI/CD pipelines to automatically validate deployment quality using site reliability guardians and performance benchmarks?
-15. Describe how you would implement Dynatrace's business analytics for a retail company, correlating application performance with conversion rates, cart abandonment, and revenue impact in real-time.
-16. How do you implement a Dynatrace deployment that handles monitoring for a serverless architecture (AWS Lambda, Azure Functions) where traditional agent-based monitoring is not applicable?
-17. Describe how you would implement Dynatrace's security analytics for detecting and responding to runtime attacks, including injection attacks, data exfiltration, and privilege escalation.
-18. How do you implement a Dynatrace-based cost optimization platform that correlates infrastructure costs with application performance to identify over-provisioned resources and optimization opportunities?
-19. Describe how you would implement Dynatrace's distributed tracing for a complex event-driven architecture with multiple message queues, ensuring complete trace continuity across asynchronous boundaries.
-20. How do you implement a Dynatrace deployment that provides unified observability for a hybrid cloud migration, monitoring both legacy on-premises systems and new cloud-native services simultaneously?
-21. Describe how you would implement Dynatrace's Davis AI for predictive incident detection, identifying potential failures 30 minutes before they impact users based on leading indicators.
-22. How do you implement a Dynatrace-based platform engineering observability system that provides golden path templates for service instrumentation, ensuring consistent monitoring standards across all teams?
-23. Describe how you would implement Dynatrace's RUM and synthetic monitoring together for a comprehensive user experience monitoring strategy that covers both real and simulated user journeys.
-24. How do you implement a Dynatrace deployment for a multi-tenant SaaS platform, providing per-tenant observability while maintaining data isolation and enabling platform-level cross-tenant analysis?
-25. Describe how you would implement Dynatrace's Grail data lakehouse for long-term observability data retention, enabling historical analysis, compliance reporting, and machine learning model training.
-
----
-
-## Rapid-Fire Questions
-
-1. What does OneAgent automatically discover without manual configuration?
-2. What is the purpose of Dynatrace's `problem.open` event in webhook notifications?
-3. What does Davis AI stand for in Dynatrace?
-4. What is the purpose of Dynatrace's `management zone` feature?
-5. What does Dynatrace's `Smartscape` visualize?
-6. What is the purpose of Dynatrace's `ActiveGate`?
-7. What does Dynatrace's `PurePath` technology capture?
-8. What is the purpose of Dynatrace's `synthetic monitor`?
-9. What does Dynatrace's `RUM` measure?
-10. What is the purpose of Dynatrace's `SLO` feature?
-11. What does Dynatrace's `anomaly detection` baseline on?
-12. What is the purpose of Dynatrace's `tagging` feature?
-13. What does Dynatrace's `service flow` diagram show?
-14. What is the purpose of Dynatrace's `maintenance window`?
-15. What does Dynatrace's `problem card` contain?
-16. What is the purpose of Dynatrace's `alerting profile`?
-17. What does Dynatrace's `calculated service metric` create?
-18. What is the purpose of Dynatrace's `ownership` feature?
-19. What does Dynatrace's `Davis AI` root cause analysis identify?
-20. What is the purpose of Dynatrace's `workflow automation`?
-21. What does Dynatrace's `session replay` capture?
-22. What is the purpose of Dynatrace's `site reliability guardian`?
-23. What does Dynatrace's `DQL` query language access?
-24. What is the purpose of Dynatrace's `Grail` data lakehouse?
-25. What does Dynatrace's `Notebooks` feature provide?
-26. What is the purpose of Dynatrace's `extension framework`?
-27. What does Dynatrace's `application security` feature detect?
-28. What is the purpose of Dynatrace's `business analytics`?
-29. What does Dynatrace's `infrastructure monitoring` cover?
-30. What is the purpose of Dynatrace's `log monitoring`?
-31. What does Dynatrace's `network monitoring` detect?
-32. What is the purpose of Dynatrace's `cloud infrastructure monitoring`?
-33. What does Dynatrace's `Kubernetes monitoring` track?
-34. What is the purpose of Dynatrace's `database monitoring`?
-35. What does Dynatrace's `process group` represent?
-36. What is the purpose of Dynatrace's `host group`?
-37. What does Dynatrace's `service detection rule` configure?
-38. What is the purpose of Dynatrace's `custom device`?
-39. What does Dynatrace's `metric event` trigger?
-40. What is the purpose of Dynatrace's `problem notification`?
-41. What does Dynatrace's `deployment event` track?
-42. What is the purpose of Dynatrace's `configuration event`?
-43. What does Dynatrace's `availability event` indicate?
-44. What is the purpose of Dynatrace's `custom event`?
-45. What does Dynatrace's `error event` capture?
-46. What is the purpose of Dynatrace's `performance event`?
-47. What does Dynatrace's `resource contention event` indicate?
-48. What is the purpose of Dynatrace's `slowdown event`?
-49. What does Dynatrace's `unexpected high traffic event` indicate?
-50. What is the purpose of Dynatrace's `low traffic event`?

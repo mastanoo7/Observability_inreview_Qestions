@@ -5,6 +5,187 @@
 
 ---
 
+
+## Basic Questions
+
+1. What is Grafana and what is its primary use case in a monitoring stack?
+2. What is a Grafana datasource and how do you add one?
+3. What is the difference between a Grafana panel and a dashboard?
+4. How do you create a new dashboard in Grafana?
+5. What is a Grafana variable and how does it make dashboards dynamic?
+6. What is the purpose of the time range picker in Grafana dashboards?
+7. How do you share a Grafana dashboard with a team member?
+8. What is Grafana Loki and how does it differ from Prometheus?
+9. What is the default port Grafana listens on?
+10. How do you add a Prometheus datasource to Grafana?
+11. What is a Grafana alert and how does it differ from a Prometheus alert?
+12. What is the purpose of Grafana's Explore view?
+13. How do you create a simple time series panel in Grafana?
+14. What is a Grafana annotation and when would you use it?
+15. What is the difference between Grafana's bar chart and histogram panel types?
+16. How do you configure a Grafana dashboard to auto-refresh every 30 seconds?
+17. What is Grafana's stat panel used for?
+18. How do you import a pre-built dashboard from Grafana.com?
+19. What is the purpose of Grafana's table panel?
+20. How do you configure a threshold in a Grafana panel to change color based on value?
+21. What is Grafana's alert state history and how do you access it?
+22. What is the difference between Grafana OSS and Grafana Enterprise?
+23. How do you create a Grafana folder to organize dashboards?
+24. What is the purpose of Grafana's dashboard links feature?
+25. How do you configure Grafana to use SMTP for email alert notifications?
+26. What is a Grafana playlist and when would you use it?
+27. How do you duplicate a panel in a Grafana dashboard?
+28. What is the purpose of Grafana's `$__interval` variable?
+29. How do you configure Grafana's data source health check?
+30. What is Grafana Tempo and what type of data does it store?
+31. How do you create a Grafana alert rule based on a Prometheus query?
+32. What is the purpose of the Grafana `$__timeFilter` variable?
+33. How do you configure Grafana's organization settings?
+34. What is a Grafana contact point and how does it relate to alerting?
+35. How do you use Grafana's query inspector to debug a slow panel?
+36. What is the purpose of Grafana's `$__range` variable?
+37. How do you configure Grafana to display data from multiple datasources in a single panel?
+38. What is Grafana Mimir and how does it extend Prometheus?
+39. How do you configure Grafana's user authentication using local accounts?
+40. What is the purpose of Grafana's dashboard version history?
+41. How do you configure a Grafana panel to show the last known value when data is missing?
+42. What is the difference between Grafana's `rate` and `irate` functions when used with Prometheus datasource?
+43. How do you configure Grafana's notification policies?
+44. What is the purpose of Grafana's transformation feature?
+45. How do you export a Grafana dashboard as JSON for backup?
+
+---
+
+## Intermediate Questions
+
+1. How do you implement Grafana dashboard templating with chained variables where selecting a cluster filters the available namespace options?
+2. Describe how you would configure Grafana's unified alerting to route alerts to different teams based on label matchers.
+3. How do you implement Grafana's RBAC to allow developers to view dashboards but not edit datasources or alert rules?
+4. Explain how Grafana's query caching works and how you would configure it to reduce load on a Prometheus backend.
+5. How do you implement a Grafana dashboard that shows SLO compliance with error budget burn rate using Prometheus recording rules?
+6. Describe how you would configure Grafana to correlate Loki logs with Prometheus metrics using derived fields and data links.
+7. How do you implement Grafana's mixed datasource feature to combine metrics from Prometheus and logs from Elasticsearch in a single panel?
+8. Explain how Grafana's alert evaluation works and how the evaluation interval affects alert detection latency.
+9. How do you implement Grafana's state timeline panel to visualize service health state transitions over time?
+10. Describe how you would configure Grafana's Tempo datasource to enable trace-to-metrics and metrics-to-trace navigation.
+11. How do you implement Grafana's dashboard provisioning using ConfigMaps in a Kubernetes deployment?
+12. Explain how Grafana's `$__rate_interval` variable differs from `$__interval` and when each should be used.
+13. How do you implement Grafana's alerting silence rules programmatically using the Grafana API?
+14. Describe how you would configure Grafana's LDAP integration for enterprise SSO authentication.
+15. How do you implement Grafana's multi-value variable to filter metrics across multiple services simultaneously?
+16. Explain how Grafana's Loki datasource handles log volume queries differently from log content queries.
+17. How do you implement Grafana's service graph panel to visualize microservice dependencies from Tempo trace data?
+18. Describe how you would configure Grafana's alert contact points for PagerDuty integration with proper severity mapping.
+19. How do you implement Grafana's dashboard as code using Jsonnet and Grafonnet?
+20. Explain how Grafana's query splitting feature works and when it improves performance for long time range queries.
+21. How do you implement Grafana's data source permissions to restrict access to production metrics for specific teams?
+22. Describe how you would configure Grafana's Mimir datasource for multi-tenant metric queries.
+23. How do you implement Grafana's exemplar support to navigate from metrics to traces?
+24. Explain how Grafana's alert state machine works, including the pending, firing, and resolved states.
+25. How do you implement Grafana's reporting feature to generate scheduled PDF reports of key dashboards?
+26. Describe how you would configure Grafana's Kubernetes monitoring using the Kubernetes app plugin.
+27. How do you implement Grafana's public dashboards feature for sharing metrics with external stakeholders?
+28. Explain how Grafana's transformation pipeline works and provide three examples of useful transformations.
+29. How do you implement Grafana's alert notification templates to customize the content of alert messages?
+30. Describe how you would configure Grafana's high availability deployment with a shared database backend.
+31. How do you implement Grafana's dashboard search and tagging to organize hundreds of dashboards?
+32. Explain how Grafana's Loki label browser works and how you use it to explore log streams.
+33. How do you implement Grafana's canvas panel for custom operational status boards?
+34. Describe how you would configure Grafana's Azure Monitor datasource for multi-subscription monitoring.
+35. How do you implement Grafana's alert grouping to reduce notification noise during widespread incidents?
+36. Explain how Grafana's Flux query language differs from InfluxQL when querying InfluxDB datasources.
+37. How do you implement Grafana's heatmap panel to visualize latency distribution over time?
+38. Describe how you would configure Grafana's Google Cloud Monitoring datasource for GKE cluster monitoring.
+39. How do you implement Grafana's variable refresh options to automatically update variable values when the time range changes?
+40. Explain how Grafana's Prometheus datasource handles recording rules differently from raw metric queries.
+
+---
+
+## Advanced Questions
+
+1. Design a Grafana architecture for a 500-team enterprise with isolated spaces, centralized datasource management, SSO integration, and automated dashboard provisioning via GitOps.
+2. How do you implement a Grafana-based observability platform that provides unified visibility across metrics (Mimir), logs (Loki), and traces (Tempo) with automatic correlation for incident investigation?
+3. Describe how you would implement Grafana's multi-tenancy at scale for a managed service provider with 200 customers, each requiring complete data isolation and custom branding.
+4. How do you implement a Grafana deployment that maintains dashboard availability during Prometheus backend failures, including fallback datasources and cached data display?
+5. Describe how you would implement a Grafana-based SRE platform that automatically generates SLO dashboards, error budget burn rate alerts, and incident correlation views for 500 services.
+6. How do you implement Grafana's alerting at enterprise scale with 10,000 alert rules, ensuring sub-minute evaluation latency and reliable notification delivery?
+7. Describe how you would implement a Grafana deployment for a financial services company with strict data residency requirements, ensuring that metrics from different regions never cross geographic boundaries.
+8. How do you implement a Grafana-based incident management platform that automatically creates war room dashboards, correlates relevant metrics, and tracks incident timeline annotations?
+9. Describe how you would implement Grafana's RBAC model for a complex enterprise with nested team hierarchies, shared infrastructure dashboards, and team-specific application dashboards.
+10. How do you implement a Grafana deployment that handles 10,000 concurrent dashboard users without degrading query performance or causing backend overload?
+11. Describe how you would implement a Grafana-based cost observability platform that correlates infrastructure metrics with cloud billing data to provide per-service cost attribution.
+12. How do you implement Grafana's alerting for a Kubernetes multi-cluster environment where the same alert rules need to be applied consistently across 50 clusters with cluster-specific routing?
+13. Describe how you would implement a Grafana deployment that automatically provisions dashboards, datasources, and alert rules when a new microservice is deployed via CI/CD.
+14. How do you implement Grafana's Loki integration at scale for a platform generating 10TB of logs per day, ensuring fast log search and correlation with metrics?
+15. Describe how you would implement a Grafana-based chaos engineering observability platform that visualizes the impact of chaos experiments on service reliability in real-time.
+16. How do you implement Grafana's security hardening for a production deployment, including TLS termination, secret management, audit logging, and vulnerability scanning?
+17. Describe how you would implement a Grafana deployment that provides real-time business intelligence dashboards combining operational metrics with business KPIs from multiple data sources.
+18. How do you implement Grafana's plugin management at enterprise scale, including plugin security review, version pinning, and automated updates across 50 Grafana instances?
+19. Describe how you would implement a Grafana-based capacity planning platform that uses historical metrics to forecast resource requirements and generate automated scaling recommendations.
+20. How do you implement Grafana's disaster recovery strategy, ensuring that all dashboards, alert rules, and configurations can be restored within 30 minutes of a complete Grafana instance failure?
+21. Describe how you would implement a Grafana deployment that supports A/B testing of dashboard designs, measuring which dashboard layouts lead to faster incident resolution times.
+22. How do you implement Grafana's integration with a service catalog to automatically link dashboards to service ownership information, runbooks, and on-call schedules?
+23. Describe how you would implement a Grafana-based compliance monitoring platform for a healthcare organization, ensuring HIPAA-compliant data access controls and audit trails.
+24. How do you implement Grafana's Tempo integration for a distributed tracing platform handling 1 billion spans per day, ensuring fast trace search and correlation with logs and metrics?
+25. Describe how you would implement a Grafana deployment that provides executive-level business dashboards with automatic data freshness indicators and SLA compliance summaries.
+
+---
+
+## Rapid-Fire Questions
+
+1. What is the default port for Grafana?
+2. What file format does Grafana use to export dashboards?
+3. What is the purpose of Grafana's `$__from` and `$__to` variables?
+4. What does the Grafana `stat` panel display?
+5. What is the difference between Grafana's `alert` and `recording rule`?
+6. How do you reset a Grafana admin password from the command line?
+7. What is the purpose of Grafana's `mixed` datasource?
+8. What does the Grafana `gauge` panel type display?
+9. What is Grafana's `provisioning` directory used for?
+10. What is the difference between Grafana OSS and Grafana Cloud?
+11. What does `$__interval` represent in a Grafana query?
+12. How do you enable Grafana's anonymous access for public dashboards?
+13. What is the purpose of Grafana's `overrides` in panel configuration?
+14. What does the Grafana `news` panel display?
+15. What is the purpose of Grafana's `repeat` feature for panels?
+16. How do you configure Grafana's session timeout?
+17. What is the difference between Grafana's `bar gauge` and `gauge` panel types?
+18. What does Grafana's `Explore` mode allow you to do?
+19. What is the purpose of Grafana's `link` panel type?
+20. How do you configure Grafana to use a PostgreSQL database instead of SQLite?
+21. What is the purpose of Grafana's `fieldConfig` in panel JSON?
+22. What does the Grafana `logs` panel display?
+23. What is the purpose of Grafana's `threshold` configuration in panels?
+24. How do you configure Grafana's `smtp` settings for email notifications?
+25. What is the difference between Grafana's `contact point` and `notification policy`?
+26. What does Grafana's `flame graph` panel visualize?
+27. What is the purpose of Grafana's `dashboard uid`?
+28. How do you configure Grafana's `rendering` service for PDF report generation?
+29. What is the purpose of Grafana's `alerting` folder in provisioning?
+30. What does the Grafana `traces` panel display?
+31. What is the purpose of Grafana's `correlations` feature?
+32. How do you configure Grafana's `cookie_samesite` setting?
+33. What is the difference between Grafana's `alert rule` and `alert instance`?
+34. What does Grafana's `geomap` panel display?
+35. What is the purpose of Grafana's `data source uid` in dashboard JSON?
+36. How do you configure Grafana's `max_open_files` setting?
+37. What is the purpose of Grafana's `dashboard tags`?
+38. What does Grafana's `xy chart` panel display?
+39. What is the purpose of Grafana's `alert group` in unified alerting?
+40. How do you configure Grafana's `allow_embedding` setting?
+41. What is the difference between Grafana's `panel` and `row`?
+42. What does Grafana's `histogram` panel display?
+43. What is the purpose of Grafana's `snapshot` feature?
+44. How do you configure Grafana's `auto_assign_org_role` setting?
+45. What is the purpose of Grafana's `alert evaluation group`?
+46. What does Grafana's `candlestick` panel display?
+47. What is the purpose of Grafana's `library panel`?
+48. How do you configure Grafana's `login_maximum_inactive_lifetime_duration`?
+49. What is the difference between Grafana's `folder` and `general` dashboard location?
+50. What does Grafana's `trend` panel display?
+
+---
+
 ## Dashboard Design & Troubleshooting
 
 1. A Grafana dashboard that was working perfectly yesterday is now showing "No data" for all panels. The underlying Prometheus datasource is healthy and returning data via direct queries. Walk through your systematic debugging approach.
@@ -204,181 +385,3 @@
 78. You're implementing Grafana for a financial services company with strict compliance requirements. How do you implement audit logging, data retention policies, and access controls to meet SOC 2 and PCI-DSS requirements?
 
 ---
-
-## Basic Questions
-
-1. What is Grafana and what is its primary use case in a monitoring stack?
-2. What is a Grafana datasource and how do you add one?
-3. What is the difference between a Grafana panel and a dashboard?
-4. How do you create a new dashboard in Grafana?
-5. What is a Grafana variable and how does it make dashboards dynamic?
-6. What is the purpose of the time range picker in Grafana dashboards?
-7. How do you share a Grafana dashboard with a team member?
-8. What is Grafana Loki and how does it differ from Prometheus?
-9. What is the default port Grafana listens on?
-10. How do you add a Prometheus datasource to Grafana?
-11. What is a Grafana alert and how does it differ from a Prometheus alert?
-12. What is the purpose of Grafana's Explore view?
-13. How do you create a simple time series panel in Grafana?
-14. What is a Grafana annotation and when would you use it?
-15. What is the difference between Grafana's bar chart and histogram panel types?
-16. How do you configure a Grafana dashboard to auto-refresh every 30 seconds?
-17. What is Grafana's stat panel used for?
-18. How do you import a pre-built dashboard from Grafana.com?
-19. What is the purpose of Grafana's table panel?
-20. How do you configure a threshold in a Grafana panel to change color based on value?
-21. What is Grafana's alert state history and how do you access it?
-22. What is the difference between Grafana OSS and Grafana Enterprise?
-23. How do you create a Grafana folder to organize dashboards?
-24. What is the purpose of Grafana's dashboard links feature?
-25. How do you configure Grafana to use SMTP for email alert notifications?
-26. What is a Grafana playlist and when would you use it?
-27. How do you duplicate a panel in a Grafana dashboard?
-28. What is the purpose of Grafana's `$__interval` variable?
-29. How do you configure Grafana's data source health check?
-30. What is Grafana Tempo and what type of data does it store?
-31. How do you create a Grafana alert rule based on a Prometheus query?
-32. What is the purpose of the Grafana `$__timeFilter` variable?
-33. How do you configure Grafana's organization settings?
-34. What is a Grafana contact point and how does it relate to alerting?
-35. How do you use Grafana's query inspector to debug a slow panel?
-36. What is the purpose of Grafana's `$__range` variable?
-37. How do you configure Grafana to display data from multiple datasources in a single panel?
-38. What is Grafana Mimir and how does it extend Prometheus?
-39. How do you configure Grafana's user authentication using local accounts?
-40. What is the purpose of Grafana's dashboard version history?
-41. How do you configure a Grafana panel to show the last known value when data is missing?
-42. What is the difference between Grafana's `rate` and `irate` functions when used with Prometheus datasource?
-43. How do you configure Grafana's notification policies?
-44. What is the purpose of Grafana's transformation feature?
-45. How do you export a Grafana dashboard as JSON for backup?
-
----
-
-## Intermediate Questions
-
-1. How do you implement Grafana dashboard templating with chained variables where selecting a cluster filters the available namespace options?
-2. Describe how you would configure Grafana's unified alerting to route alerts to different teams based on label matchers.
-3. How do you implement Grafana's RBAC to allow developers to view dashboards but not edit datasources or alert rules?
-4. Explain how Grafana's query caching works and how you would configure it to reduce load on a Prometheus backend.
-5. How do you implement a Grafana dashboard that shows SLO compliance with error budget burn rate using Prometheus recording rules?
-6. Describe how you would configure Grafana to correlate Loki logs with Prometheus metrics using derived fields and data links.
-7. How do you implement Grafana's mixed datasource feature to combine metrics from Prometheus and logs from Elasticsearch in a single panel?
-8. Explain how Grafana's alert evaluation works and how the evaluation interval affects alert detection latency.
-9. How do you implement Grafana's state timeline panel to visualize service health state transitions over time?
-10. Describe how you would configure Grafana's Tempo datasource to enable trace-to-metrics and metrics-to-trace navigation.
-11. How do you implement Grafana's dashboard provisioning using ConfigMaps in a Kubernetes deployment?
-12. Explain how Grafana's `$__rate_interval` variable differs from `$__interval` and when each should be used.
-13. How do you implement Grafana's alerting silence rules programmatically using the Grafana API?
-14. Describe how you would configure Grafana's LDAP integration for enterprise SSO authentication.
-15. How do you implement Grafana's multi-value variable to filter metrics across multiple services simultaneously?
-16. Explain how Grafana's Loki datasource handles log volume queries differently from log content queries.
-17. How do you implement Grafana's service graph panel to visualize microservice dependencies from Tempo trace data?
-18. Describe how you would configure Grafana's alert contact points for PagerDuty integration with proper severity mapping.
-19. How do you implement Grafana's dashboard as code using Jsonnet and Grafonnet?
-20. Explain how Grafana's query splitting feature works and when it improves performance for long time range queries.
-21. How do you implement Grafana's data source permissions to restrict access to production metrics for specific teams?
-22. Describe how you would configure Grafana's Mimir datasource for multi-tenant metric queries.
-23. How do you implement Grafana's exemplar support to navigate from metrics to traces?
-24. Explain how Grafana's alert state machine works, including the pending, firing, and resolved states.
-25. How do you implement Grafana's reporting feature to generate scheduled PDF reports of key dashboards?
-26. Describe how you would configure Grafana's Kubernetes monitoring using the Kubernetes app plugin.
-27. How do you implement Grafana's public dashboards feature for sharing metrics with external stakeholders?
-28. Explain how Grafana's transformation pipeline works and provide three examples of useful transformations.
-29. How do you implement Grafana's alert notification templates to customize the content of alert messages?
-30. Describe how you would configure Grafana's high availability deployment with a shared database backend.
-31. How do you implement Grafana's dashboard search and tagging to organize hundreds of dashboards?
-32. Explain how Grafana's Loki label browser works and how you use it to explore log streams.
-33. How do you implement Grafana's canvas panel for custom operational status boards?
-34. Describe how you would configure Grafana's Azure Monitor datasource for multi-subscription monitoring.
-35. How do you implement Grafana's alert grouping to reduce notification noise during widespread incidents?
-36. Explain how Grafana's Flux query language differs from InfluxQL when querying InfluxDB datasources.
-37. How do you implement Grafana's heatmap panel to visualize latency distribution over time?
-38. Describe how you would configure Grafana's Google Cloud Monitoring datasource for GKE cluster monitoring.
-39. How do you implement Grafana's variable refresh options to automatically update variable values when the time range changes?
-40. Explain how Grafana's Prometheus datasource handles recording rules differently from raw metric queries.
-
----
-
-## Advanced Questions
-
-1. Design a Grafana architecture for a 500-team enterprise with isolated spaces, centralized datasource management, SSO integration, and automated dashboard provisioning via GitOps.
-2. How do you implement a Grafana-based observability platform that provides unified visibility across metrics (Mimir), logs (Loki), and traces (Tempo) with automatic correlation for incident investigation?
-3. Describe how you would implement Grafana's multi-tenancy at scale for a managed service provider with 200 customers, each requiring complete data isolation and custom branding.
-4. How do you implement a Grafana deployment that maintains dashboard availability during Prometheus backend failures, including fallback datasources and cached data display?
-5. Describe how you would implement a Grafana-based SRE platform that automatically generates SLO dashboards, error budget burn rate alerts, and incident correlation views for 500 services.
-6. How do you implement Grafana's alerting at enterprise scale with 10,000 alert rules, ensuring sub-minute evaluation latency and reliable notification delivery?
-7. Describe how you would implement a Grafana deployment for a financial services company with strict data residency requirements, ensuring that metrics from different regions never cross geographic boundaries.
-8. How do you implement a Grafana-based incident management platform that automatically creates war room dashboards, correlates relevant metrics, and tracks incident timeline annotations?
-9. Describe how you would implement Grafana's RBAC model for a complex enterprise with nested team hierarchies, shared infrastructure dashboards, and team-specific application dashboards.
-10. How do you implement a Grafana deployment that handles 10,000 concurrent dashboard users without degrading query performance or causing backend overload?
-11. Describe how you would implement a Grafana-based cost observability platform that correlates infrastructure metrics with cloud billing data to provide per-service cost attribution.
-12. How do you implement Grafana's alerting for a Kubernetes multi-cluster environment where the same alert rules need to be applied consistently across 50 clusters with cluster-specific routing?
-13. Describe how you would implement a Grafana deployment that automatically provisions dashboards, datasources, and alert rules when a new microservice is deployed via CI/CD.
-14. How do you implement Grafana's Loki integration at scale for a platform generating 10TB of logs per day, ensuring fast log search and correlation with metrics?
-15. Describe how you would implement a Grafana-based chaos engineering observability platform that visualizes the impact of chaos experiments on service reliability in real-time.
-16. How do you implement Grafana's security hardening for a production deployment, including TLS termination, secret management, audit logging, and vulnerability scanning?
-17. Describe how you would implement a Grafana deployment that provides real-time business intelligence dashboards combining operational metrics with business KPIs from multiple data sources.
-18. How do you implement Grafana's plugin management at enterprise scale, including plugin security review, version pinning, and automated updates across 50 Grafana instances?
-19. Describe how you would implement a Grafana-based capacity planning platform that uses historical metrics to forecast resource requirements and generate automated scaling recommendations.
-20. How do you implement Grafana's disaster recovery strategy, ensuring that all dashboards, alert rules, and configurations can be restored within 30 minutes of a complete Grafana instance failure?
-21. Describe how you would implement a Grafana deployment that supports A/B testing of dashboard designs, measuring which dashboard layouts lead to faster incident resolution times.
-22. How do you implement Grafana's integration with a service catalog to automatically link dashboards to service ownership information, runbooks, and on-call schedules?
-23. Describe how you would implement a Grafana-based compliance monitoring platform for a healthcare organization, ensuring HIPAA-compliant data access controls and audit trails.
-24. How do you implement Grafana's Tempo integration for a distributed tracing platform handling 1 billion spans per day, ensuring fast trace search and correlation with logs and metrics?
-25. Describe how you would implement a Grafana deployment that provides executive-level business dashboards with automatic data freshness indicators and SLA compliance summaries.
-
----
-
-## Rapid-Fire Questions
-
-1. What is the default port for Grafana?
-2. What file format does Grafana use to export dashboards?
-3. What is the purpose of Grafana's `$__from` and `$__to` variables?
-4. What does the Grafana `stat` panel display?
-5. What is the difference between Grafana's `alert` and `recording rule`?
-6. How do you reset a Grafana admin password from the command line?
-7. What is the purpose of Grafana's `mixed` datasource?
-8. What does the Grafana `gauge` panel type display?
-9. What is Grafana's `provisioning` directory used for?
-10. What is the difference between Grafana OSS and Grafana Cloud?
-11. What does `$__interval` represent in a Grafana query?
-12. How do you enable Grafana's anonymous access for public dashboards?
-13. What is the purpose of Grafana's `overrides` in panel configuration?
-14. What does the Grafana `news` panel display?
-15. What is the purpose of Grafana's `repeat` feature for panels?
-16. How do you configure Grafana's session timeout?
-17. What is the difference between Grafana's `bar gauge` and `gauge` panel types?
-18. What does Grafana's `Explore` mode allow you to do?
-19. What is the purpose of Grafana's `link` panel type?
-20. How do you configure Grafana to use a PostgreSQL database instead of SQLite?
-21. What is the purpose of Grafana's `fieldConfig` in panel JSON?
-22. What does the Grafana `logs` panel display?
-23. What is the purpose of Grafana's `threshold` configuration in panels?
-24. How do you configure Grafana's `smtp` settings for email notifications?
-25. What is the difference between Grafana's `contact point` and `notification policy`?
-26. What does Grafana's `flame graph` panel visualize?
-27. What is the purpose of Grafana's `dashboard uid`?
-28. How do you configure Grafana's `rendering` service for PDF report generation?
-29. What is the purpose of Grafana's `alerting` folder in provisioning?
-30. What does the Grafana `traces` panel display?
-31. What is the purpose of Grafana's `correlations` feature?
-32. How do you configure Grafana's `cookie_samesite` setting?
-33. What is the difference between Grafana's `alert rule` and `alert instance`?
-34. What does Grafana's `geomap` panel display?
-35. What is the purpose of Grafana's `data source uid` in dashboard JSON?
-36. How do you configure Grafana's `max_open_files` setting?
-37. What is the purpose of Grafana's `dashboard tags`?
-38. What does Grafana's `xy chart` panel display?
-39. What is the purpose of Grafana's `alert group` in unified alerting?
-40. How do you configure Grafana's `allow_embedding` setting?
-41. What is the difference between Grafana's `panel` and `row`?
-42. What does Grafana's `histogram` panel display?
-43. What is the purpose of Grafana's `snapshot` feature?
-44. How do you configure Grafana's `auto_assign_org_role` setting?
-45. What is the purpose of Grafana's `alert evaluation group`?
-46. What does Grafana's `candlestick` panel display?
-47. What is the purpose of Grafana's `library panel`?
-48. How do you configure Grafana's `login_maximum_inactive_lifetime_duration`?
-49. What is the difference between Grafana's `folder` and `general` dashboard location?
-50. What does Grafana's `trend` panel display?

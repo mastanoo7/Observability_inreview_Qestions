@@ -5,6 +5,188 @@
 
 ---
 
+
+## Basic Questions
+
+1. What is Splunk and what is its primary use case in enterprise IT?
+2. What is the difference between a Splunk indexer, search head, and forwarder?
+3. What is a Splunk index and how does it organize data?
+4. What is SPL (Search Processing Language) and what is it used for?
+5. What is a Universal Forwarder and how does it differ from a Heavy Forwarder?
+6. How do you perform a basic keyword search in Splunk?
+7. What is a Splunk sourcetype and why is it important?
+8. What is the purpose of the `index` field in a Splunk search?
+9. How do you use the `stats` command in SPL?
+10. What is a Splunk saved search and when would you use it?
+11. What is the purpose of the `host` field in Splunk events?
+12. How do you use the `table` command in SPL to format search results?
+13. What is a Splunk dashboard and how do you create one?
+14. What is the purpose of the `eval` command in SPL?
+15. How do you use the `rex` command to extract fields from log data?
+16. What is a Splunk alert and how do you configure one?
+17. What is the purpose of the `timechart` command in SPL?
+18. How do you use the `dedup` command to remove duplicate events?
+19. What is a Splunk lookup and when would you use it?
+20. What is the purpose of the `where` command in SPL?
+21. How do you configure a Splunk forwarder to send data to an indexer?
+22. What is the purpose of the `props.conf` file in Splunk?
+23. How do you use the `top` command to find the most common values?
+24. What is a Splunk field extraction and how do you create one?
+25. What is the purpose of the `transforms.conf` file in Splunk?
+26. How do you use the `transaction` command in SPL?
+27. What is a Splunk data model and when would you use it?
+28. How do you configure Splunk to monitor a log file on a local system?
+29. What is the purpose of the `inputs.conf` file in Splunk?
+30. How do you use the `sort` command in SPL?
+31. What is a Splunk knowledge object and give three examples?
+32. How do you use the `rename` command in SPL?
+33. What is the purpose of Splunk's HTTP Event Collector (HEC)?
+34. How do you use the `head` and `tail` commands in SPL?
+35. What is a Splunk index-time field extraction versus a search-time field extraction?
+36. How do you configure Splunk's `outputs.conf` for a Universal Forwarder?
+37. What is the purpose of the `_internal` index in Splunk?
+38. How do you use the `makeresults` command in SPL for testing?
+39. What is a Splunk macro and how do you create one?
+40. How do you use the `iplocation` command in SPL?
+41. What is the purpose of Splunk's `_audit` index?
+42. How do you configure Splunk's time zone settings for correct timestamp parsing?
+43. What is the `splunkd.log` file and what information does it contain?
+44. How do you use the `fieldsummary` command to understand data quality?
+45. What is the purpose of Splunk's `_metrics` index?
+
+---
+
+## Intermediate Questions
+
+1. How do you implement Splunk's `tstats` command for accelerated searches over data models?
+2. Describe how you would configure Splunk's index clustering with a replication factor of 3 and search factor of 2.
+3. How do you implement Splunk's summary indexing to pre-compute expensive searches for dashboard performance?
+4. Explain how Splunk's bucket lifecycle (hot, warm, cold, frozen) works and how you configure transitions.
+5. How do you implement Splunk's Search Head Clustering (SHC) for high availability?
+6. Describe how you would configure Splunk's forwarder load balancing across multiple indexers.
+7. How do you implement Splunk's role-based access control to restrict data access by index and sourcetype?
+8. Explain how Splunk's `join` command works and when you should use `lookup` instead for better performance.
+9. How do you implement Splunk's data model acceleration to improve pivot search performance?
+10. Describe how you would configure Splunk's SmartStore to offload cold buckets to S3.
+11. How do you implement Splunk's `streamstats` command for running calculations over event streams?
+12. Explain how Splunk's `eventstats` command differs from `stats` and when each is appropriate.
+13. How do you implement Splunk's alert suppression to prevent duplicate notifications for the same issue?
+14. Describe how you would configure Splunk's multi-site clustering for disaster recovery.
+15. How do you implement Splunk's `predict` command for time series forecasting?
+16. Explain how Splunk's `cluster` command works for grouping similar events.
+17. How do you implement Splunk's workflow actions to create interactive links from search results?
+18. Describe how you would configure Splunk's Indexer Discovery for automatic forwarder-to-indexer routing.
+19. How do you implement Splunk's `anomalydetection` command for statistical anomaly detection?
+20. Explain how Splunk's `map` command works and when it is appropriate to use.
+21. How do you implement Splunk's data integrity control to detect and prevent data tampering?
+22. Describe how you would configure Splunk's search scheduler to manage concurrent search load.
+23. How do you implement Splunk's `geostats` command for geographic data visualization?
+24. Explain how Splunk's `accum` command works for running totals.
+25. How do you implement Splunk's field aliases to normalize inconsistent field names across sourcetypes?
+26. Describe how you would configure Splunk's Heavy Forwarder for data routing and filtering.
+27. How do you implement Splunk's `bucket` command for time-based aggregations?
+28. Explain how Splunk's `appendcols` command works for combining search results.
+29. How do you implement Splunk's `inputlookup` and `outputlookup` for lookup table management?
+30. Describe how you would configure Splunk's Deployment Server for managing forwarder configurations at scale.
+31. How do you implement Splunk's `sendalert` command for programmatic alert triggering?
+32. Explain how Splunk's `sistats` command differs from `stats` for distributed searches.
+33. How do you implement Splunk's `typelearner` command for automatic field type detection?
+34. Describe how you would configure Splunk's index-time anonymization for PII data masking.
+35. How do you implement Splunk's `contingency` command for cross-tabulation analysis?
+36. Explain how Splunk's `multikv` command works for parsing multi-value key-value data.
+37. How do you implement Splunk's `crawl` command for file system discovery?
+38. Describe how you would configure Splunk's alert actions for automated remediation.
+39. How do you implement Splunk's `xyseries` command for pivot table creation?
+40. Explain how Splunk's `trendline` command works for moving average calculations.
+
+---
+
+## Advanced Questions
+
+1. Design a Splunk architecture for a global enterprise ingesting 50TB/day across 5 data centers, with multi-site clustering, SmartStore, and compliance data retention for 7 years.
+2. How do you implement a Splunk-based SIEM platform for a financial services company, including real-time threat detection, automated response, and compliance reporting for SOX and PCI-DSS?
+3. Describe how you would implement Splunk's Machine Learning Toolkit (MLTK) for predictive anomaly detection in infrastructure metrics, including model training, validation, and production deployment.
+4. How do you implement a Splunk deployment that handles 1 million events per second ingestion with sub-second search latency for real-time security monitoring?
+5. Describe how you would implement Splunk's IT Service Intelligence (ITSI) for a complex service dependency tree with 500 services, including KPI configuration, service health scoring, and episode management.
+6. How do you implement a Splunk-based observability platform that correlates application logs, infrastructure metrics, and distributed traces for end-to-end incident investigation?
+7. Describe how you would implement Splunk's federated search across multiple Splunk deployments in different security zones, ensuring data sovereignty and access controls.
+8. How do you implement a Splunk deployment that provides real-time fraud detection for a payment processing system, including the SPL queries, alert logic, and automated response actions?
+9. Describe how you would implement Splunk's data fabric search for querying data across Splunk, S3, and external databases without data movement.
+10. How do you implement a Splunk-based compliance monitoring platform for GDPR, including data subject request handling, consent tracking, and breach detection?
+11. Describe how you would implement Splunk's User Behavior Analytics (UBA) for insider threat detection, including data requirements, model configuration, and integration with ES notable events.
+12. How do you implement a Splunk deployment that automatically scales indexer capacity based on ingestion volume, using cloud auto-scaling and Splunk's dynamic data self-storage?
+13. Describe how you would implement Splunk's Adaptive Response framework for automated incident containment, including playbook design and integration with SOAR platforms.
+14. How do you implement a Splunk-based network security monitoring platform that detects lateral movement, data exfiltration, and command-and-control communications in real-time?
+15. Describe how you would implement Splunk's mission control for unified security operations, integrating ES, UBA, and SOAR into a single incident management workflow.
+16. How do you implement a Splunk deployment for a healthcare organization with HIPAA compliance requirements, including PHI data masking, access auditing, and breach notification workflows?
+17. Describe how you would implement Splunk's Observability Cloud integration with Splunk Enterprise for a unified view of infrastructure metrics, application logs, and distributed traces.
+18. How do you implement a Splunk-based DevSecOps platform that integrates with CI/CD pipelines to detect security vulnerabilities in code deployments and infrastructure changes?
+19. Describe how you would implement Splunk's data stream processor for real-time data enrichment, routing, and transformation before data reaches the indexers.
+20. How do you implement a Splunk deployment that provides real-time business intelligence for a retail company, correlating point-of-sale transactions, inventory data, and customer behavior logs?
+21. Describe how you would implement Splunk's multi-cloud monitoring for an organization spanning AWS, GCP, and Azure, with unified security monitoring and compliance reporting.
+22. How do you implement a Splunk-based IoT monitoring platform for a manufacturing company with 100,000 sensors, including real-time anomaly detection and predictive maintenance?
+23. Describe how you would implement Splunk's risk-based alerting (RBA) framework to reduce SOC alert fatigue while maintaining detection coverage for critical threats.
+24. How do you implement a Splunk deployment that handles the ingestion and analysis of encrypted log data, including key management and selective decryption for authorized investigations?
+25. Describe how you would implement Splunk's content pack deployment strategy for a managed security service provider (MSSP) serving 100 customers with different security requirements.
+
+---
+
+## Rapid-Fire Questions
+
+1. What is the default Splunk web interface port?
+2. What SPL command do you use to count events by field value?
+3. What is the purpose of the `_time` field in Splunk?
+4. What does `index=main sourcetype=syslog` search for?
+5. What is the difference between `stats` and `eventstats` in SPL?
+6. What SPL command extracts fields using regex patterns?
+7. What is the purpose of Splunk's `_raw` field?
+8. What does the `head 10` command do in SPL?
+9. What is a Splunk bucket and what are its states?
+10. What is the purpose of Splunk's `props.conf` `TIME_FORMAT` setting?
+11. What SPL command do you use to calculate a moving average?
+12. What is the difference between Splunk's `search` and `where` commands?
+13. What is the purpose of Splunk's `_indextime` field?
+14. What does `| stats count by host` return?
+15. What is the Splunk `kvstore` used for?
+16. What is the purpose of Splunk's `transforms.conf` `REGEX` setting?
+17. What SPL command do you use to join two searches?
+18. What is the difference between Splunk's `rex` and `extract` commands?
+19. What is the purpose of Splunk's `_sourcetype` field?
+20. What does `| timechart span=1h count` display?
+21. What is the Splunk `fishbucket` used for?
+22. What is the purpose of Splunk's `inputs.conf` `monitor` stanza?
+23. What SPL command do you use to remove duplicate events?
+24. What is the difference between Splunk's `append` and `appendcols` commands?
+25. What is the purpose of Splunk's `_meta` field?
+26. What does `| top limit=10 sourcetype` return?
+27. What is the Splunk `dispatch` directory used for?
+28. What is the purpose of Splunk's `outputs.conf` `tcpout` stanza?
+29. What SPL command do you use to calculate percentiles?
+30. What is the difference between Splunk's `eval` and `fieldformat` commands?
+31. What is the purpose of Splunk's `_subsecond` field?
+32. What does `| rare limit=5 host` return?
+33. What is the Splunk `lookups` directory used for?
+34. What is the purpose of Splunk's `props.conf` `BREAK_ONLY_BEFORE` setting?
+35. What SPL command do you use to create a lookup table from search results?
+36. What is the difference between Splunk's `transaction` and `stats` commands for session analysis?
+37. What is the purpose of Splunk's `_cd` field?
+38. What does `| makeresults count=10` generate?
+39. What is the Splunk `modinput` used for?
+40. What is the purpose of Splunk's `transforms.conf` `DEST_KEY` setting?
+41. What SPL command do you use to format numbers and dates?
+42. What is the difference between Splunk's `iplocation` and `geoip` commands?
+43. What is the purpose of Splunk's `_bkt` field?
+44. What does `| sistats count by host` do differently from `stats`?
+45. What is the Splunk `splunk_search_history` index used for?
+46. What is the purpose of Splunk's `props.conf` `MAX_EVENTS` setting?
+47. What SPL command do you use to pivot data into a matrix format?
+48. What is the difference between Splunk's `search` mode and `fast` mode?
+49. What is the purpose of Splunk's `_serial` field?
+50. What does `| gentimes start=-7d increment=1d` generate?
+
+---     
+
+
 ## Indexers & Indexing Architecture
 
 1. Your Splunk indexer cluster is experiencing indexing latency spikes every 4 hours. The spikes correlate with bucket rolling events. How do you diagnose whether this is a disk I/O issue, a replication factor issue, or a search peer load issue?
@@ -200,181 +382,3 @@
 78. How do you implement compliance logging in Splunk for a healthcare organization, ensuring HIPAA-compliant data handling, access controls, and audit trails for all log access?
 
 ---
-
-## Basic Questions
-
-1. What is Splunk and what is its primary use case in enterprise IT?
-2. What is the difference between a Splunk indexer, search head, and forwarder?
-3. What is a Splunk index and how does it organize data?
-4. What is SPL (Search Processing Language) and what is it used for?
-5. What is a Universal Forwarder and how does it differ from a Heavy Forwarder?
-6. How do you perform a basic keyword search in Splunk?
-7. What is a Splunk sourcetype and why is it important?
-8. What is the purpose of the `index` field in a Splunk search?
-9. How do you use the `stats` command in SPL?
-10. What is a Splunk saved search and when would you use it?
-11. What is the purpose of the `host` field in Splunk events?
-12. How do you use the `table` command in SPL to format search results?
-13. What is a Splunk dashboard and how do you create one?
-14. What is the purpose of the `eval` command in SPL?
-15. How do you use the `rex` command to extract fields from log data?
-16. What is a Splunk alert and how do you configure one?
-17. What is the purpose of the `timechart` command in SPL?
-18. How do you use the `dedup` command to remove duplicate events?
-19. What is a Splunk lookup and when would you use it?
-20. What is the purpose of the `where` command in SPL?
-21. How do you configure a Splunk forwarder to send data to an indexer?
-22. What is the purpose of the `props.conf` file in Splunk?
-23. How do you use the `top` command to find the most common values?
-24. What is a Splunk field extraction and how do you create one?
-25. What is the purpose of the `transforms.conf` file in Splunk?
-26. How do you use the `transaction` command in SPL?
-27. What is a Splunk data model and when would you use it?
-28. How do you configure Splunk to monitor a log file on a local system?
-29. What is the purpose of the `inputs.conf` file in Splunk?
-30. How do you use the `sort` command in SPL?
-31. What is a Splunk knowledge object and give three examples?
-32. How do you use the `rename` command in SPL?
-33. What is the purpose of Splunk's HTTP Event Collector (HEC)?
-34. How do you use the `head` and `tail` commands in SPL?
-35. What is a Splunk index-time field extraction versus a search-time field extraction?
-36. How do you configure Splunk's `outputs.conf` for a Universal Forwarder?
-37. What is the purpose of the `_internal` index in Splunk?
-38. How do you use the `makeresults` command in SPL for testing?
-39. What is a Splunk macro and how do you create one?
-40. How do you use the `iplocation` command in SPL?
-41. What is the purpose of Splunk's `_audit` index?
-42. How do you configure Splunk's time zone settings for correct timestamp parsing?
-43. What is the `splunkd.log` file and what information does it contain?
-44. How do you use the `fieldsummary` command to understand data quality?
-45. What is the purpose of Splunk's `_metrics` index?
-
----
-
-## Intermediate Questions
-
-1. How do you implement Splunk's `tstats` command for accelerated searches over data models?
-2. Describe how you would configure Splunk's index clustering with a replication factor of 3 and search factor of 2.
-3. How do you implement Splunk's summary indexing to pre-compute expensive searches for dashboard performance?
-4. Explain how Splunk's bucket lifecycle (hot, warm, cold, frozen) works and how you configure transitions.
-5. How do you implement Splunk's Search Head Clustering (SHC) for high availability?
-6. Describe how you would configure Splunk's forwarder load balancing across multiple indexers.
-7. How do you implement Splunk's role-based access control to restrict data access by index and sourcetype?
-8. Explain how Splunk's `join` command works and when you should use `lookup` instead for better performance.
-9. How do you implement Splunk's data model acceleration to improve pivot search performance?
-10. Describe how you would configure Splunk's SmartStore to offload cold buckets to S3.
-11. How do you implement Splunk's `streamstats` command for running calculations over event streams?
-12. Explain how Splunk's `eventstats` command differs from `stats` and when each is appropriate.
-13. How do you implement Splunk's alert suppression to prevent duplicate notifications for the same issue?
-14. Describe how you would configure Splunk's multi-site clustering for disaster recovery.
-15. How do you implement Splunk's `predict` command for time series forecasting?
-16. Explain how Splunk's `cluster` command works for grouping similar events.
-17. How do you implement Splunk's workflow actions to create interactive links from search results?
-18. Describe how you would configure Splunk's Indexer Discovery for automatic forwarder-to-indexer routing.
-19. How do you implement Splunk's `anomalydetection` command for statistical anomaly detection?
-20. Explain how Splunk's `map` command works and when it is appropriate to use.
-21. How do you implement Splunk's data integrity control to detect and prevent data tampering?
-22. Describe how you would configure Splunk's search scheduler to manage concurrent search load.
-23. How do you implement Splunk's `geostats` command for geographic data visualization?
-24. Explain how Splunk's `accum` command works for running totals.
-25. How do you implement Splunk's field aliases to normalize inconsistent field names across sourcetypes?
-26. Describe how you would configure Splunk's Heavy Forwarder for data routing and filtering.
-27. How do you implement Splunk's `bucket` command for time-based aggregations?
-28. Explain how Splunk's `appendcols` command works for combining search results.
-29. How do you implement Splunk's `inputlookup` and `outputlookup` for lookup table management?
-30. Describe how you would configure Splunk's Deployment Server for managing forwarder configurations at scale.
-31. How do you implement Splunk's `sendalert` command for programmatic alert triggering?
-32. Explain how Splunk's `sistats` command differs from `stats` for distributed searches.
-33. How do you implement Splunk's `typelearner` command for automatic field type detection?
-34. Describe how you would configure Splunk's index-time anonymization for PII data masking.
-35. How do you implement Splunk's `contingency` command for cross-tabulation analysis?
-36. Explain how Splunk's `multikv` command works for parsing multi-value key-value data.
-37. How do you implement Splunk's `crawl` command for file system discovery?
-38. Describe how you would configure Splunk's alert actions for automated remediation.
-39. How do you implement Splunk's `xyseries` command for pivot table creation?
-40. Explain how Splunk's `trendline` command works for moving average calculations.
-
----
-
-## Advanced Questions
-
-1. Design a Splunk architecture for a global enterprise ingesting 50TB/day across 5 data centers, with multi-site clustering, SmartStore, and compliance data retention for 7 years.
-2. How do you implement a Splunk-based SIEM platform for a financial services company, including real-time threat detection, automated response, and compliance reporting for SOX and PCI-DSS?
-3. Describe how you would implement Splunk's Machine Learning Toolkit (MLTK) for predictive anomaly detection in infrastructure metrics, including model training, validation, and production deployment.
-4. How do you implement a Splunk deployment that handles 1 million events per second ingestion with sub-second search latency for real-time security monitoring?
-5. Describe how you would implement Splunk's IT Service Intelligence (ITSI) for a complex service dependency tree with 500 services, including KPI configuration, service health scoring, and episode management.
-6. How do you implement a Splunk-based observability platform that correlates application logs, infrastructure metrics, and distributed traces for end-to-end incident investigation?
-7. Describe how you would implement Splunk's federated search across multiple Splunk deployments in different security zones, ensuring data sovereignty and access controls.
-8. How do you implement a Splunk deployment that provides real-time fraud detection for a payment processing system, including the SPL queries, alert logic, and automated response actions?
-9. Describe how you would implement Splunk's data fabric search for querying data across Splunk, S3, and external databases without data movement.
-10. How do you implement a Splunk-based compliance monitoring platform for GDPR, including data subject request handling, consent tracking, and breach detection?
-11. Describe how you would implement Splunk's User Behavior Analytics (UBA) for insider threat detection, including data requirements, model configuration, and integration with ES notable events.
-12. How do you implement a Splunk deployment that automatically scales indexer capacity based on ingestion volume, using cloud auto-scaling and Splunk's dynamic data self-storage?
-13. Describe how you would implement Splunk's Adaptive Response framework for automated incident containment, including playbook design and integration with SOAR platforms.
-14. How do you implement a Splunk-based network security monitoring platform that detects lateral movement, data exfiltration, and command-and-control communications in real-time?
-15. Describe how you would implement Splunk's mission control for unified security operations, integrating ES, UBA, and SOAR into a single incident management workflow.
-16. How do you implement a Splunk deployment for a healthcare organization with HIPAA compliance requirements, including PHI data masking, access auditing, and breach notification workflows?
-17. Describe how you would implement Splunk's Observability Cloud integration with Splunk Enterprise for a unified view of infrastructure metrics, application logs, and distributed traces.
-18. How do you implement a Splunk-based DevSecOps platform that integrates with CI/CD pipelines to detect security vulnerabilities in code deployments and infrastructure changes?
-19. Describe how you would implement Splunk's data stream processor for real-time data enrichment, routing, and transformation before data reaches the indexers.
-20. How do you implement a Splunk deployment that provides real-time business intelligence for a retail company, correlating point-of-sale transactions, inventory data, and customer behavior logs?
-21. Describe how you would implement Splunk's multi-cloud monitoring for an organization spanning AWS, GCP, and Azure, with unified security monitoring and compliance reporting.
-22. How do you implement a Splunk-based IoT monitoring platform for a manufacturing company with 100,000 sensors, including real-time anomaly detection and predictive maintenance?
-23. Describe how you would implement Splunk's risk-based alerting (RBA) framework to reduce SOC alert fatigue while maintaining detection coverage for critical threats.
-24. How do you implement a Splunk deployment that handles the ingestion and analysis of encrypted log data, including key management and selective decryption for authorized investigations?
-25. Describe how you would implement Splunk's content pack deployment strategy for a managed security service provider (MSSP) serving 100 customers with different security requirements.
-
----
-
-## Rapid-Fire Questions
-
-1. What is the default Splunk web interface port?
-2. What SPL command do you use to count events by field value?
-3. What is the purpose of the `_time` field in Splunk?
-4. What does `index=main sourcetype=syslog` search for?
-5. What is the difference between `stats` and `eventstats` in SPL?
-6. What SPL command extracts fields using regex patterns?
-7. What is the purpose of Splunk's `_raw` field?
-8. What does the `head 10` command do in SPL?
-9. What is a Splunk bucket and what are its states?
-10. What is the purpose of Splunk's `props.conf` `TIME_FORMAT` setting?
-11. What SPL command do you use to calculate a moving average?
-12. What is the difference between Splunk's `search` and `where` commands?
-13. What is the purpose of Splunk's `_indextime` field?
-14. What does `| stats count by host` return?
-15. What is the Splunk `kvstore` used for?
-16. What is the purpose of Splunk's `transforms.conf` `REGEX` setting?
-17. What SPL command do you use to join two searches?
-18. What is the difference between Splunk's `rex` and `extract` commands?
-19. What is the purpose of Splunk's `_sourcetype` field?
-20. What does `| timechart span=1h count` display?
-21. What is the Splunk `fishbucket` used for?
-22. What is the purpose of Splunk's `inputs.conf` `monitor` stanza?
-23. What SPL command do you use to remove duplicate events?
-24. What is the difference between Splunk's `append` and `appendcols` commands?
-25. What is the purpose of Splunk's `_meta` field?
-26. What does `| top limit=10 sourcetype` return?
-27. What is the Splunk `dispatch` directory used for?
-28. What is the purpose of Splunk's `outputs.conf` `tcpout` stanza?
-29. What SPL command do you use to calculate percentiles?
-30. What is the difference between Splunk's `eval` and `fieldformat` commands?
-31. What is the purpose of Splunk's `_subsecond` field?
-32. What does `| rare limit=5 host` return?
-33. What is the Splunk `lookups` directory used for?
-34. What is the purpose of Splunk's `props.conf` `BREAK_ONLY_BEFORE` setting?
-35. What SPL command do you use to create a lookup table from search results?
-36. What is the difference between Splunk's `transaction` and `stats` commands for session analysis?
-37. What is the purpose of Splunk's `_cd` field?
-38. What does `| makeresults count=10` generate?
-39. What is the Splunk `modinput` used for?
-40. What is the purpose of Splunk's `transforms.conf` `DEST_KEY` setting?
-41. What SPL command do you use to format numbers and dates?
-42. What is the difference between Splunk's `iplocation` and `geoip` commands?
-43. What is the purpose of Splunk's `_bkt` field?
-44. What does `| sistats count by host` do differently from `stats`?
-45. What is the Splunk `splunk_search_history` index used for?
-46. What is the purpose of Splunk's `props.conf` `MAX_EVENTS` setting?
-47. What SPL command do you use to pivot data into a matrix format?
-48. What is the difference between Splunk's `search` mode and `fast` mode?
-49. What is the purpose of Splunk's `_serial` field?
-50. What does `| gentimes start=-7d increment=1d` generate?
